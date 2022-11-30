@@ -3,9 +3,9 @@ site_url: http://williamglyork.github.io/catepilagames/
 nav:
   - Home: index.md
   - Requirements: req.md
-  - Planning: planning.md
-  - Risk assessment: risk.md
   - Architecture: arch.md
+  - Planning: planning.md
+  - Risk Assessment: risk.md
   - Implementation: imp.md
 theme:
   name: material
