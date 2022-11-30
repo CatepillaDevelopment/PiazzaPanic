@@ -4,6 +4,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tristique dolor n
 
 ## Weekly plan
 
+### 21/11/2022
+
+Our initial Gantt charts. Work is not yet assigned to members of the team
+
+![Documentation](img/2022-11-21/documentation.png)
+![Design](img/2022-11-21/design.png)
+![Implementation](img/2022-11-21/implementation.png)
+![Requirement elicitation](img/2022-11-21/req.png)
+![Testing](img/2022-11-21/testing)
+
 ### 28/11/2022
 
 ![Gantt Chart](img/CATEPILA_DEVELOPMENT.png)
