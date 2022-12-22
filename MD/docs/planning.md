@@ -28,7 +28,23 @@ Our initial Gantt charts. Work is not yet assigned to members of the team
 
 ### **28/11/2022**
 
-![Gantt Chart](img/CATEPILA_DEVELOPMENT.png)
+![Documentation](img/2022-28-11/Documentation.png)
+
+---
+
+![Design](img/2022-28-11/Design.png)
+
+---
+
+![Implementation](img/2022-28-11/Implementation.png)
+
+---
+
+![Requirement elicitation](img/2022-28-11/Requirements.png)
+
+---
+
+![Testing](img/2022-28-11/Testing.png)
 
 ## Plan1.pdf
 
