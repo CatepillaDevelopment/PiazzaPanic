@@ -1,5 +1,5 @@
 package piazzapanic.entitiysystem;
 
-public abstract class Entity {
+public abstract class EntityBase {
 
 }
