@@ -1,12 +1,18 @@
 package piazzapanic.entitiysystem.dynamic.items;
 
 import piazzapanic.entitiysystem.dynamic.DynamicObjectBase;
+import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
+import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
 
 public abstract class ItemBase extends DynamicObjectBase {
     protected boolean ruined;
+    protected CharacterBase heldBy;
+    protected WorkstationBase placedOn;
     
-    public ItemBase(){
+    public ItemBase(WorkstationBase spawnLocation){
         this.ruined = false;
+        this.heldBy = null;
+        this.placedOn = spawnLocation;
     }
 
     public boolean isRuined(){
@@ -21,5 +27,29 @@ public abstract class ItemBase extends DynamicObjectBase {
         else {
             return false;
         }
+    }
+
+    public boolean isHeld(){
+        return (this.heldBy != null);
+    }
+
+    public CharacterBase getHolder(){
+        return this.heldBy;
+    }
+
+    public CharacterBase setHolder(){
+        return this.heldBy;
+    }
+
+    public boolean isPlaced(){
+        return (this.placedOn != null);
+    }
+
+    public WorkstationBase getPlacedOn(){
+        return this.placedOn;
+    }
+
+    public WorkstationBase setPlacedOn(){
+        return this.placedOn;
     }
 }
