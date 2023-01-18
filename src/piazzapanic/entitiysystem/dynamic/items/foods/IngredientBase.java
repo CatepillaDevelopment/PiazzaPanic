@@ -90,5 +90,21 @@ public abstract class IngredientBase extends ItemBase {
             return false;
         }
     }
+
+    @Override
+    public boolean equals(Object object){
+        if (this.getClass() == object.getClass()){
+            if (object instanceof IngredientBase){
+                IngredientBase ingredient = (IngredientBase) object;
+                if (this.isChopped() == ingredient.isChopped() &&
+                    this.isFried() == ingredient.isFried() &&
+                    this.isGrilled() == ingredient.isGrilled() &&
+                    this.isToasted() == ingredient.isToasted()){
+                        return true;
+                    }
+            }
+        }
+        return false;
+    }
     
 }
