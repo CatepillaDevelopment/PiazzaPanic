@@ -8,6 +8,7 @@ public abstract class IngredientBase extends ItemBase {
     protected boolean fried;
     protected boolean grilled;
     protected boolean toasted;
+    protected MealBase inMeal;
 
     public IngredientBase(WorkstationBase spawnLocation) {
         super(spawnLocation);
@@ -34,6 +35,9 @@ public abstract class IngredientBase extends ItemBase {
     }
     public boolean isToasted(){
         return this.toasted;
+    }
+    public boolean isInMeal(){
+        return (!(this.inMeal == null));
     }
 
     //this code doesn't take into account that items may need to be prepared differently for different meals
@@ -89,6 +93,13 @@ public abstract class IngredientBase extends ItemBase {
             this.ruin();
             return false;
         }
+    }
+    public boolean setInMeal(MealBase meal){
+        if (!(this.isInMeal())){
+            this.inMeal = meal;
+            return true;
+        }
+        return false;
     }
 
     @Override

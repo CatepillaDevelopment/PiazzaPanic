@@ -37,8 +37,8 @@ public abstract class ItemBase extends DynamicObjectBase {
         return this.heldBy;
     }
 
-    public CharacterBase setHolder(){
-        return this.heldBy;
+    public void setHolder(CharacterBase character){
+        this.heldBy = character;
     }
 
     public boolean isPlaced(){
@@ -49,7 +49,7 @@ public abstract class ItemBase extends DynamicObjectBase {
         return this.placedOn;
     }
 
-    public WorkstationBase setPlacedOn(){
-        return this.placedOn;
+    public void setPlacedOn(WorkstationBase workstation){
+        this.placedOn = workstation;
     }
 }
