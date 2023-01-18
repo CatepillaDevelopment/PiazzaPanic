@@ -46,4 +46,11 @@ public abstract class MealBase extends ItemBase {
         }
     }
 
+    public boolean isPrepared(){
+        if (this.contents.equals(this.getRecipe())){
+            return true;
+        }
+        return false;
+    }
+
 }
