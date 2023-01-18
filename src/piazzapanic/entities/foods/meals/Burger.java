@@ -2,7 +2,7 @@ package piazzapanic.entities.foods.meals;
 
 import java.util.Stack;
 
-import piazzapanic.entities.foods.ingredients.Buns;
+import piazzapanic.entities.foods.ingredients.Bun;
 import piazzapanic.entities.foods.ingredients.Patty;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.MealBase;
@@ -23,9 +23,9 @@ public class Burger extends MealBase {
     @Override
     public Stack<IngredientBase> getRecipe() {
         //define the ingredients and empty recipe
-        Buns bun = new Buns(null);
+        Bun bun = new Bun(null);
         Patty patty = new Patty(null);
-        Buns bun2 = new Buns(null);
+        Bun bun2 = new Bun(null);
         Stack<IngredientBase> recipe = new Stack<>();
 
         //now the recipe steps
