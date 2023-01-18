@@ -1,7 +1,7 @@
 package piazzapanic.entitiysystem.dynamic;
 
-import piazzapanic.entitiysystem.Entity;
+import piazzapanic.entitiysystem.EntityBase;
 
-public abstract class DynamicObjectBase extends Entity {
+public abstract class DynamicObjectBase extends EntityBase {
     
 }

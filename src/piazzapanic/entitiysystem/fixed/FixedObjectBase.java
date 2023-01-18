@@ -1,7 +1,7 @@
 package piazzapanic.entitiysystem.fixed;
 
-import piazzapanic.entitiysystem.Entity;
+import piazzapanic.entitiysystem.EntityBase;
 
-public abstract class FixedObjectBase extends Entity {
+public abstract class FixedObjectBase extends EntityBase {
     
 }
