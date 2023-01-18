@@ -15,4 +15,24 @@ public class Patty extends IngredientBase {
         return "src/piazzapanic/entities/workstations/data/Patty.png";
     }
 
+    @Override
+    public boolean canBeChopped() {
+        return true;
+    }
+
+    @Override
+    public boolean canBeFried() {
+        return false;
+    }
+
+    @Override
+    public boolean canBeGrilled() {
+        return true;
+    }
+
+    @Override
+    public boolean canBeToasted() {
+        return false;
+    }
+
 }

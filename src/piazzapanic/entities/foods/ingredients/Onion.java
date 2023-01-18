@@ -15,4 +15,24 @@ public class Onion extends IngredientBase {
         return "src/piazzapanic/entities/workstations/data/Onion.png";
     }
 
+    @Override
+    public boolean canBeChopped() {
+        return true;
+    }
+
+    @Override
+    public boolean canBeFried() {
+        return true;
+    }
+
+    @Override
+    public boolean canBeGrilled() {
+        return false;
+    }
+
+    @Override
+    public boolean canBeToasted() {
+        return false;
+    }
+
 }

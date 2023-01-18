@@ -15,4 +15,28 @@ public class Lettuce extends IngredientBase {
         return "src/piazzapanic/entities/workstations/data/Lettuce.png";
     }
 
+    @Override
+    public boolean canBeChopped() {
+        // TODO Auto-generated method stub
+        return true;
+    }
+
+    @Override
+    public boolean canBeFried() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean canBeGrilled() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean canBeToasted() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
 }
