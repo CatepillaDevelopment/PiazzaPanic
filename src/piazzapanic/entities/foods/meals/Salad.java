@@ -7,11 +7,11 @@ import piazzapanic.entities.foods.ingredients.Onion;
 import piazzapanic.entities.foods.ingredients.Tomato;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.MealBase;
-import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
+import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 
 public class Salad extends MealBase {
 
-    public Salad(WorkstationBase spawnLocation) {
+    public Salad(PreperationStationBase spawnLocation) {
         super(spawnLocation);
         //TODO Auto-generated constructor stub
     }

@@ -1,13 +1,12 @@
 package piazzapanic.entities.foods.ingredients;
 
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
+import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 
 public class Lettuce extends IngredientBase {
 
-    public Lettuce(WorkstationBase spawnLocation) {
+    public Lettuce(PreperationStationBase spawnLocation) {
         super(spawnLocation);
-        //TODO Auto-generated constructor stub
     }
 
     @Override
@@ -17,25 +16,21 @@ public class Lettuce extends IngredientBase {
 
     @Override
     public boolean canBeChopped() {
-        // TODO Auto-generated method stub
         return true;
     }
 
     @Override
     public boolean canBeFried() {
-        // TODO Auto-generated method stub
         return false;
     }
 
     @Override
     public boolean canBeGrilled() {
-        // TODO Auto-generated method stub
         return false;
     }
 
     @Override
     public boolean canBeToasted() {
-        // TODO Auto-generated method stub
         return false;
     }
 

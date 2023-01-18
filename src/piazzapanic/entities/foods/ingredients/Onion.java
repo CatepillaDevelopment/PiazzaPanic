@@ -1,13 +1,12 @@
 package piazzapanic.entities.foods.ingredients;
 
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
+import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 
 public class Onion extends IngredientBase {
 
-    public Onion(WorkstationBase spawnLocation) {
+    public Onion(PreperationStationBase spawnLocation) {
         super(spawnLocation);
-        //TODO Auto-generated constructor stub
     }
 
     @Override

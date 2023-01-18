@@ -6,11 +6,11 @@ import piazzapanic.entities.foods.ingredients.Bun;
 import piazzapanic.entities.foods.ingredients.Patty;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.MealBase;
-import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
+import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 
 public class Burger extends MealBase {
 
-    public Burger(WorkstationBase spawnLocation) {
+    public Burger(PreperationStationBase spawnLocation) {
         super(spawnLocation);
         //TODO Auto-generated constructor stub
     }
