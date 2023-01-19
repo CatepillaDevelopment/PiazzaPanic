@@ -5,6 +5,11 @@ import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 
 public class Bun extends IngredientBase {
 
+    @Override
+    public String getName() {
+        return "Bun";
+    }
+
     public Bun(PreperationStationBase spawnLocation) {
         super(spawnLocation);
     }

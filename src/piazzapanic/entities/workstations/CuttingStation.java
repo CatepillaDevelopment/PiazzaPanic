@@ -7,6 +7,11 @@ import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 public class CuttingStation extends PreperationStationBase {
 
     @Override
+    public String getName() {
+        return "Cutting Station";
+    }
+
+    @Override
     public String getTextureFilePath() {
         return "src/piazzapanic/entities/workstations/data/CuttingStation.png";
     }

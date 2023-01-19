@@ -7,6 +7,11 @@ import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 public class Fryer extends PreperationStationBase {
 
     @Override
+    public String getName() {
+        return "Fryer";
+    }
+
+    @Override
     public String getTextureFilePath() {
         return "src/piazzapanic/entities/workstations/data/Fryer.png";
     }

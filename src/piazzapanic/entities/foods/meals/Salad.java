@@ -11,6 +11,11 @@ import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 
 public class Salad extends MealBase {
 
+    @Override
+    public String getName() {
+        return "Salad";
+    }
+
     public Salad(PreperationStationBase spawnLocation) {
         super(spawnLocation);
         //TODO Auto-generated constructor stub

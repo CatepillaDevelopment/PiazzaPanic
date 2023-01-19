@@ -7,6 +7,11 @@ import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 public class Toaster extends PreperationStationBase {
 
     @Override
+    public String getName() {
+        return "Toaster";
+    }
+
+    @Override
     public String getTextureFilePath() {
         return "src/piazzapanic/entities/workstations/data/Toaster.png";
     }
