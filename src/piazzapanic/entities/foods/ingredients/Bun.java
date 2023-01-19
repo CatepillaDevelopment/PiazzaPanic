@@ -1,7 +1,7 @@
 package piazzapanic.entities.foods.ingredients;
 
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
+import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
 public class Bun extends IngredientBase {
 
@@ -10,13 +10,13 @@ public class Bun extends IngredientBase {
         return "Bun";
     }
 
-    public Bun(PreperationStationBase spawnLocation) {
+    public Bun(FixedObjectBase spawnLocation) {
         super(spawnLocation);
     }
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Buns.png";
+        return "src/piazzapanic/entities/workstations/data/Bun.png";
     }
 
     @Override

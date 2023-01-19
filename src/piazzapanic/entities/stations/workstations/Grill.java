@@ -1,26 +1,26 @@
-package piazzapanic.entities.workstations;
+package piazzapanic.entities.stations.workstations;
 
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 
-public class CuttingStation extends PreperationStationBase {
+public class Grill extends PreperationStationBase {
 
     @Override
     public String getName() {
-        return "Cutting Station";
+        return "Grill";
     }
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/CuttingStation.png";
+        return "src/piazzapanic/entities/stations/workstations/data/Grill.png";
     }
 
     @Override
     public boolean processItem(ItemBase item) {
         if (item instanceof IngredientBase){
             IngredientBase ingredient = (IngredientBase) item;
-            return ingredient.chop();
+            return ingredient.grill();
         }
         else {
             item.ruin();

@@ -2,14 +2,15 @@ package piazzapanic.entitiysystem.dynamic.items;
 
 import piazzapanic.entitiysystem.dynamic.DynamicObjectBase;
 import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
+import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
 
 public abstract class ItemBase extends DynamicObjectBase {
     protected boolean ruined;
     protected CharacterBase heldBy;
-    protected PreperationStationBase placedOn;
+    protected FixedObjectBase placedOn;
     
-    public ItemBase(PreperationStationBase spawnLocation){
+    public ItemBase(FixedObjectBase spawnLocation){
         this.ruined = false;
         this.heldBy = null;
         this.placedOn = spawnLocation;
@@ -45,7 +46,7 @@ public abstract class ItemBase extends DynamicObjectBase {
         return (this.placedOn != null);
     }
 
-    public PreperationStationBase getPlacedOn(){
+    public FixedObjectBase getPlacedOn(){
         return this.placedOn;
     }
 

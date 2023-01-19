@@ -1,7 +1,7 @@
 package piazzapanic.entitiysystem.dynamic.items.foods;
 
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
-import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
+import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
 public abstract class IngredientBase extends ItemBase {
     protected boolean chopped;
@@ -10,7 +10,7 @@ public abstract class IngredientBase extends ItemBase {
     protected boolean toasted;
     protected MealBase inMeal;
 
-    public IngredientBase(PreperationStationBase spawnLocation) {
+    public IngredientBase(FixedObjectBase spawnLocation) {
         super(spawnLocation);
         this.chopped = false;
         this.fried = false;

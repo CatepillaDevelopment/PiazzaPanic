@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.Stack;
 
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
-import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
+import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
 public abstract class MealBase extends ItemBase {
     protected Stack<IngredientBase> stepsLeftToComplete;
     protected List<IngredientBase> contents;
 
-    public MealBase(PreperationStationBase spawnLocation) {
+    public MealBase(FixedObjectBase spawnLocation) {
         super(spawnLocation);
         this.contents = null;
         this.stepsLeftToComplete = this.getRecipe();

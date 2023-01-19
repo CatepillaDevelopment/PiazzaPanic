@@ -1,7 +1,7 @@
 package piazzapanic.entities.foods.ingredients;
 
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
+import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
 public class Lettuce extends IngredientBase {
 
@@ -10,7 +10,7 @@ public class Lettuce extends IngredientBase {
         return "Lettuce";
     }
 
-    public Lettuce(PreperationStationBase spawnLocation) {
+    public Lettuce(FixedObjectBase spawnLocation) {
         super(spawnLocation);
     }
 
