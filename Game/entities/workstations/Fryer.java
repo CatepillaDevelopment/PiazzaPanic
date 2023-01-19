@@ -8,7 +8,7 @@ public class Fryer extends PreperationStationBase {
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Fryer.png";
+        return "workstations/Fryer.png";
     }
 
     @Override

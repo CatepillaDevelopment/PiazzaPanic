@@ -6,7 +6,7 @@ public class ChefSteve extends ChefBase{
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/ChefSteve.png";
+        return "chefs/ChefSteve.png";
     }
 
 }

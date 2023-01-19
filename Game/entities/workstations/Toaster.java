@@ -8,7 +8,7 @@ public class Toaster extends PreperationStationBase {
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Toaster.png";
+        return "workstations/Toaster.png";
     }
 
     @Override

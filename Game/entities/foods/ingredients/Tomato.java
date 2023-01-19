@@ -11,7 +11,7 @@ public class Tomato extends IngredientBase {
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Tomato.png";
+        return "ingredients/Tomato.png";
     }
 
     @Override

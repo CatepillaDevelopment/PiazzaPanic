@@ -11,7 +11,7 @@ public class Bun extends IngredientBase {
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Buns.png";
+        return "ingredients/Buns.png";
     }
 
     @Override

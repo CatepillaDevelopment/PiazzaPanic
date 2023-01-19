@@ -11,7 +11,7 @@ public class Onion extends IngredientBase {
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Onion.png";
+        return "ingredients/Onion.png";
     }
 
     @Override

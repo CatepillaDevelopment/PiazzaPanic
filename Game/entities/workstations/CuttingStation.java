@@ -8,7 +8,7 @@ public class CuttingStation extends PreperationStationBase {
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/CuttingStation.png";
+        return "workstations/CuttingStation.png";
     }
 
     @Override

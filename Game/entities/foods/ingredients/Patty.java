@@ -11,7 +11,7 @@ public class Patty extends IngredientBase {
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Patty.png";
+        return "ingredients/Patty.png";
     }
 
     @Override

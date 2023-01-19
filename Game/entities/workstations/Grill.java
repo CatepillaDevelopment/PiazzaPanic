@@ -8,7 +8,7 @@ public class Grill extends PreperationStationBase {
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Grill.png";
+        return "workstations/Grill.png";
     }
 
     @Override

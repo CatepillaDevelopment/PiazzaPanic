@@ -17,7 +17,7 @@ public class Burger extends MealBase {
 
     @Override
     public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Burger.png";
+        return "meals/Burger.png";
     }
 
     @Override
