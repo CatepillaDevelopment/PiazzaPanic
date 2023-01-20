@@ -3,7 +3,7 @@ import piazzapanic.entitiysystem.EntityBase;
 
 import java.util.ArrayList;
 
-public class World {
+public class GameWorld {
 
     private ArrayList<EntityBase> tiles;
     private ArrayList<EntityBase> workstations;
