@@ -14,7 +14,7 @@ public class GameScreen implements Screen{
     private Viewport gamePort;
     public GameScreen(Main game){
         this.game = game;
-        texture = new Texture("badlogic.jpg");
+        texture = new Texture("MissingTexture.png");
         gameCam = new OrthographicCamera();
         gamePort = new StretchViewport(800, 400, gameCam);
     }
