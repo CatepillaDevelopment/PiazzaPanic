@@ -2,7 +2,7 @@ package piazzapanic.entities.stations.ingredientstations;
 
 import piazzapanic.entities.foods.ingredients.Bun;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.workstations.IngredientStationBase;
+import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.IngredientStationBase;
 
 public class BunStation extends IngredientStationBase{
 

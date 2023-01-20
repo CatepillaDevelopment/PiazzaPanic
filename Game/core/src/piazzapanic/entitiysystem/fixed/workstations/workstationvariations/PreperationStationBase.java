@@ -1,4 +1,4 @@
-package piazzapanic.entitiysystem.fixed.workstations;
+package piazzapanic.entitiysystem.fixed.workstations.workstationvariations;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,12 +1,12 @@
-package piazzapanic.entitiysystem.fixed.workstations;
+package piazzapanic.entitiysystem.fixed.workstations.workstationvariations;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.FixedObjectBase;
+import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
 
-public abstract class IngredientStationBase extends FixedObjectBase{
+public abstract class IngredientStationBase extends WorkstationBase {
     protected List<IngredientBase> contents;
 
     public abstract IngredientBase getIngredientType();

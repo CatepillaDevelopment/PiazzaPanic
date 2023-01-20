@@ -2,7 +2,7 @@ package piazzapanic.entities.stations.workstations;
 
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.workstations.PreperationStationBase;
+import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.PreperationStationBase;
 
 public class Grill extends PreperationStationBase {
 
