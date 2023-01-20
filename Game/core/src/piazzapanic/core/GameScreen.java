@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package piazzapanic.core;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
