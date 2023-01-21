@@ -1,0 +1,56 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "C:/Users/benja/.templateengine/Desktop/temporary.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "C:/Users/benja/.templateengine/Desktop/temporary.tmx": {
+            "scale": 0.3822265625,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 770.4854368932038,
+                "y": 432.9892692897291
+            }
+        },
+        "indoors.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "kitchen.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "pokemon RS.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/Users/benja/.templateengine/Desktop/spritesheet",
+    "map.height": 18,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 48,
+    "map.tileWidth": 48,
+    "map.width": 32,
+    "openFiles": [
+        "pokemon RS.tsx",
+        "kitchen.tsx",
+        "indoors.tsx",
+        "C:/Users/benja/.templateengine/Desktop/temporary.tmx"
+    ],
+    "project": "Kitchen.tiled-project",
+    "recentFiles": [
+        "pokemon RS.tsx",
+        "kitchen.tsx",
+        "indoors.tsx",
+        "C:/Users/benja/.templateengine/Desktop/temporary.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 48,
+        "width": 48
+    }
+}

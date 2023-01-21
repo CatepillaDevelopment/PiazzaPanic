@@ -9,9 +9,17 @@ public class GameWorld {
     private ArrayList<EntityBase> workstations;
     private ArrayList<EntityBase> characters;
     private ArrayList<EntityBase> items;
+    private TileMap gameLevel;
 
+    public GameWorld() {
+        this.gameLevel = new TileMap();
+    }
 
     // Getters
+    public TileMap getGameLevel() {
+        return gameLevel;
+    }
+
     public ArrayList<EntityBase> getTiles() {
         return tiles;
     }
