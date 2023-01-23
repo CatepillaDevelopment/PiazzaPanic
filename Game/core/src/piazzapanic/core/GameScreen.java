@@ -18,7 +18,7 @@ public class GameScreen implements Screen{
         this.game = game;
         texture = new Texture("badlogic.jpg");
         gameCam = new OrthographicCamera();
-        gamePort = new StretchViewport(1536, 864, gameCam);
+        gamePort = new StretchViewport(this.game.width, this.game.height, gameCam);
 
         // Create the world and lock the camera into the middle
         this.gameWorld = new GameWorld();
@@ -40,7 +40,7 @@ public class GameScreen implements Screen{
     public void render(float delta) {
         update(delta);
 
-        ScreenUtils.clear(1, 0, 0, 1);
+        ScreenUtils.clear(0, 0, 0, 1);
         /*
         this.game.batch.setProjectionMatrix(gameCam.combined);
         this.game.batch.begin();

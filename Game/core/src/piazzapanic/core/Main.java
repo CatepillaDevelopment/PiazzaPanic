@@ -5,12 +5,13 @@ import com.badlogic.gdx.Game;
 
 public class Main extends Game {
 	public SpriteBatch batch;
-
+	public int width = 1536;
+	public int height = 864;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		setScreen(new GameScreen(this));
+		setScreen(new MenuScreen(this));
 	}
 
 	@Override
