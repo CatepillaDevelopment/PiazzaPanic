@@ -1,6 +1,7 @@
 package piazzapanic.core;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -18,6 +19,8 @@ public class MenuScreen implements Screen {
     private Stage stage;
     private Main game;
     private int difficulty;
+    private Label stageModeLabel;
+    private Label startGameLabel;
 
 
     public MenuScreen(Main game){
@@ -34,8 +37,8 @@ public class MenuScreen implements Screen {
         //take up the entire stage
         table.setFillParent(true);
 
-        Label stageModeLabel = new Label("Stage Mode " + "(" +this.difficulty + ")", font);
-        Label startGameLabel = new Label("Click to Play", font);
+        this.stageModeLabel = new Label("Stage Mode " + "(" +this.difficulty + ")", font);
+        this.startGameLabel = new Label("Click to Play", font);
         stageModeLabel.setFontScale(4f);
         startGameLabel.setFontScale(3f);
 
@@ -58,6 +61,12 @@ public class MenuScreen implements Screen {
         if(Gdx.input.justTouched()){
             game.setScreen(new GameScreen(game));
             dispose();
+        }
+        // if A then change difficulty
+        else if(Gdx.input.isKeyJustPressed(Input.Keys.A)){
+            this.difficulty -= 1;
+            System.out.println(this.difficulty);
+            this.stageModeLabel.setText("Stage Mode " + "(" +this.difficulty + ")");
         }
 
         ScreenUtils.clear(0, 0, 0, 1);
