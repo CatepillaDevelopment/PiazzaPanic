@@ -17,12 +17,14 @@ public class MenuScreen implements Screen {
     private Viewport viewport;
     private Stage stage;
     private Main game;
+    private int difficulty;
 
 
     public MenuScreen(Main game){
         this.game = game;
         this.viewport = new StretchViewport(this.game.width, this.game.height, new OrthographicCamera());
         this.stage = new Stage(viewport, this.game.batch);
+        this.difficulty = 5;
 
         // scenario mode
         Label.LabelStyle font = new Label.LabelStyle(new BitmapFont(), Color.WHITE);
@@ -32,7 +34,7 @@ public class MenuScreen implements Screen {
         //take up the entire stage
         table.setFillParent(true);
 
-        Label stageModeLabel = new Label("Stage Mode", font);
+        Label stageModeLabel = new Label("Stage Mode " + "(" +this.difficulty + ")", font);
         Label startGameLabel = new Label("Click to Play", font);
         stageModeLabel.setFontScale(4f);
         startGameLabel.setFontScale(3f);
