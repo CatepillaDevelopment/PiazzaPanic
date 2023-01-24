@@ -62,10 +62,15 @@ public class MenuScreen implements Screen {
             game.setScreen(new GameScreen(game));
             dispose();
         }
-        // if A then change difficulty
+        // if A or D is pressed then change difficulty
         else if(Gdx.input.isKeyJustPressed(Input.Keys.A)){
             this.difficulty -= 1;
-            System.out.println(this.difficulty);
+            if(this.difficulty < 1) this.difficulty = 5;
+            this.stageModeLabel.setText("Stage Mode " + "(" +this.difficulty + ")");
+        }
+        else if(Gdx.input.isKeyJustPressed(Input.Keys.D)){
+            this.difficulty += 1;
+            if(this.difficulty > 5) this.difficulty = 1;
             this.stageModeLabel.setText("Stage Mode " + "(" +this.difficulty + ")");
         }
 
