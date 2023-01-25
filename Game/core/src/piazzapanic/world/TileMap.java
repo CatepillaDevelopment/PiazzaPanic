@@ -9,6 +9,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entities.stations.workstations.CuttingStation;
 import piazzapanic.entities.stations.workstations.Fryer;
 import piazzapanic.entities.stations.workstations.Grill;
+import piazzapanic.entities.stations.workstations.Toaster;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
 
@@ -49,6 +50,8 @@ public class TileMap {
         new CuttingStation(4, map, world);
         new Grill(2, map, world);
         new Fryer(3, map, world);
+        // Actually counter
+        new Toaster(6, map, world);
     }
 
 }
