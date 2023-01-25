@@ -7,8 +7,8 @@ import com.badlogic.gdx.Game;
 
 public class Main extends Game implements InputProcessor {
 	public SpriteBatch batch;
-	public int width = 1536;
-	public int height = 864;
+	public int width = 1600;
+	public int height = 1200;
 	boolean movingUp = false;
 	boolean movingDown = false;
 	boolean movingLeft = false;

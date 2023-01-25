@@ -24,7 +24,7 @@ public class TileMap {
 
     public TileMap(){
         mapLoader = new TmxMapLoader();
-        map = mapLoader.load("temporary.tmx");
+        map = mapLoader.load("gameLevel/Level.tmx");
         renderer = new OrthogonalTiledMapRenderer(map);
     }
 
