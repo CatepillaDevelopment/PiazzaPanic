@@ -1,14 +1,21 @@
 package piazzapanic.entities.stations.ingredientstations;
 
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entities.foods.ingredients.Patty;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.IngredientStationBase;
 
 public class PattyStation extends IngredientStationBase{
 
+    public PattyStation(int layer, TiledMap map, World world) {
+        super(layer, map, world);
+    }
+
     @Override
     public IngredientBase getIngredientType() {
-        return new Patty(this);
+        //return new Patty(this);
+        return null;
     }
 
     @Override

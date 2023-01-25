@@ -3,8 +3,8 @@ package piazzapanic.entities.foods.ingredients;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
-public class Patty extends IngredientBase {
-
+public class Patty {
+/*
     @Override
     public String getName() {
         return "Patty";
@@ -38,5 +38,5 @@ public class Patty extends IngredientBase {
     public boolean canBeToasted() {
         return false;
     }
-
+*/
 }

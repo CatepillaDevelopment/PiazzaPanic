@@ -3,6 +3,8 @@ package piazzapanic.entitiysystem.fixed.workstations.workstationvariations;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
 
@@ -11,7 +13,8 @@ public abstract class IngredientStationBase extends WorkstationBase {
 
     public abstract IngredientBase getIngredientType();
 
-    public IngredientStationBase(){
+    public IngredientStationBase(int layer, TiledMap map, World world){
+        super(layer, map, world);
         this.contents = new ArrayList<>(4);
         this.contents.add(this.getIngredientType());
         this.contents.add(this.getIngredientType());

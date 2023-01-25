@@ -1,5 +1,7 @@
 package piazzapanic.entities.foods.ingredients;
 
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
@@ -10,8 +12,8 @@ public class Bun extends IngredientBase {
         return "Bun";
     }
 
-    public Bun(FixedObjectBase spawnLocation) {
-        super(spawnLocation);
+    public Bun(FixedObjectBase spawnLocation, TiledMap map, World world) {
+        super(spawnLocation, map, world);
     }
 
     @Override

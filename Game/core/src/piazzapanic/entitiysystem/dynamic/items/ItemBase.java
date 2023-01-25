@@ -1,5 +1,7 @@
 package piazzapanic.entitiysystem.dynamic.items;
 
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.DynamicObjectBase;
 import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
@@ -10,7 +12,8 @@ public abstract class ItemBase extends DynamicObjectBase {
     protected CharacterBase heldBy;
     protected FixedObjectBase placedOn;
     
-    public ItemBase(FixedObjectBase spawnLocation){
+    public ItemBase(FixedObjectBase spawnLocation, TiledMap map, World world){
+        super(map, world);
         this.ruined = false;
         this.heldBy = null;
         this.placedOn = spawnLocation;

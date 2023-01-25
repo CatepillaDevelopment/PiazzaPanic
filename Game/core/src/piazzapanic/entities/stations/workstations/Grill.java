@@ -1,10 +1,16 @@
 package piazzapanic.entities.stations.workstations;
 
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.PreperationStationBase;
 
 public class Grill extends PreperationStationBase {
+
+    public Grill(int layer, TiledMap map, World world) {
+        super(layer, map, world);
+    }
 
     @Override
     public String getName() {

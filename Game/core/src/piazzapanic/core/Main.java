@@ -13,6 +13,7 @@ public class Main extends Game implements InputProcessor {
 	boolean movingDown = false;
 	boolean movingLeft = false;
 	boolean movingRight = false;
+	public MenuScreen menu;
 
 	@Override
 	public void create () {

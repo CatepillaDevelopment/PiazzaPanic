@@ -1,14 +1,21 @@
 package piazzapanic.entities.stations.ingredientstations;
 
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entities.foods.ingredients.Onion;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.IngredientStationBase;
 
 public class OnionStation extends IngredientStationBase{
 
+    public OnionStation(int layer, TiledMap map, World world) {
+        super(layer, map, world);
+    }
+
     @Override
     public IngredientBase getIngredientType() {
-        return new Onion(this);
+        return null;
+        //return new Onion(this);
     }
 
     @Override

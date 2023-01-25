@@ -1,5 +1,7 @@
 package piazzapanic.entitiysystem.dynamic.items.foods;
 
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
@@ -10,8 +12,8 @@ public abstract class IngredientBase extends ItemBase {
     protected boolean toasted;
     protected MealBase inMeal;
 
-    public IngredientBase(FixedObjectBase spawnLocation) {
-        super(spawnLocation);
+    public IngredientBase(FixedObjectBase spawnLocation, TiledMap map, World world) {
+        super(spawnLocation, map, world);
         this.chopped = false;
         this.fried = false;
         this.grilled = false;

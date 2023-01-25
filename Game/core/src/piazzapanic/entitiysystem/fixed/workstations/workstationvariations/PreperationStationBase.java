@@ -4,13 +4,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
 public abstract class PreperationStationBase extends FixedObjectBase {
     protected Map<ItemBase, Integer> contents; 
 
-    public PreperationStationBase(){
+    public PreperationStationBase(int layer, TiledMap map, World world){
+        super(layer, map, world);
         contents = new HashMap<>();
     }
 

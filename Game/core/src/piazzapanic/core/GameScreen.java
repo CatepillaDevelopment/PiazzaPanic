@@ -2,6 +2,7 @@ package piazzapanic.core;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
@@ -10,6 +11,7 @@ import piazzapanic.world.GameWorld;
 public class GameScreen implements Screen{
 
     final Main game;
+    private Box2DDebugRenderer b2dr;
     Texture texture;
     private OrthographicCamera gameCam;
     private Viewport gamePort;
@@ -19,6 +21,7 @@ public class GameScreen implements Screen{
         texture = new Texture("badlogic.jpg");
         gameCam = new OrthographicCamera();
         gamePort = new StretchViewport(this.game.width, this.game.height, gameCam);
+        this.b2dr = new Box2DDebugRenderer();
 
         // Create the world and lock the camera into the middle
         this.gameWorld = new GameWorld();
@@ -50,6 +53,8 @@ public class GameScreen implements Screen{
 
         // Render the level
         gameWorld.getGameLevel().getRenderer().render();
+        //render Box2DDebugLines
+        b2dr.render(gameWorld.getGameLevel().getWorld(), gameCam.combined);
     }
 
     @Override

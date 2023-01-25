@@ -3,12 +3,10 @@ package piazzapanic.entities.foods.meals;
 import java.util.Stack;
 
 import piazzapanic.entities.foods.ingredients.Lettuce;
-import piazzapanic.entities.foods.ingredients.Onion;
-import piazzapanic.entities.foods.ingredients.Tomato;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.MealBase;
 import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.PreperationStationBase;
-
+/*
 public class Salad extends MealBase {
 
     @Override
@@ -46,3 +44,4 @@ public class Salad extends MealBase {
     }
 
 }
+*/
