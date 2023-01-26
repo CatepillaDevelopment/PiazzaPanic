@@ -2,6 +2,9 @@ package piazzapanic.core;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.maps.objects.RectangleMapObject;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
@@ -26,6 +29,7 @@ public class GameScreen implements Screen{
         // Create the world and lock the camera into the middle
         this.gameWorld = new GameWorld();
         gameCam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() / 2, 0);
+
     }
 
     @Override
@@ -34,6 +38,8 @@ public class GameScreen implements Screen{
     }
 
     public void update(float dt){
+        this.gameWorld.getGameLevel().getWorld().step(1/60f, 6, 2);
+
         // Only render what the gameCam can see
         gameCam.update();
         gameWorld.getGameLevel().getRenderer().setView(gameCam);
@@ -41,6 +47,7 @@ public class GameScreen implements Screen{
 
     @Override
     public void render(float delta) {
+        //separate update logic from render
         update(delta);
 
         ScreenUtils.clear(0, 0, 0, 1);

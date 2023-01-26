@@ -28,6 +28,8 @@ public abstract class EntityBase {
         this.bdef = new BodyDef();
         this.shape = new PolygonShape();
         this.fdef = new FixtureDef();
+
+
     }
 
     public File getTextureFile() throws FileNotFoundException{

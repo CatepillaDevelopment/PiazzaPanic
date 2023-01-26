@@ -9,5 +9,7 @@ public abstract class WorkstationBase extends FixedObjectBase {
     public WorkstationBase(int layer, TiledMap map, World world){
         super(layer, map, world);
 
+
+
     }
 }

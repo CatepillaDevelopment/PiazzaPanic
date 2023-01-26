@@ -1,15 +1,18 @@
 package piazzapanic.world;
 
+import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
+import piazzapanic.entities.chefs.ChefAlex;
 import piazzapanic.entities.stations.workstations.CuttingStation;
 import piazzapanic.entities.stations.workstations.Fryer;
 import piazzapanic.entities.stations.workstations.Grill;
 import piazzapanic.entities.stations.workstations.Toaster;
+import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
 
@@ -18,6 +21,8 @@ public class TileMap {
     private TmxMapLoader mapLoader;
     private TiledMap map;
     private OrthogonalTiledMapRenderer renderer;
+
+    private ChefBase alex;
 
     //Box2d variables
     private World world;
@@ -54,6 +59,10 @@ public class TileMap {
         new Toaster(6, map, world);
         // Actually wall
         new Toaster(5, map, world);
+
+        // Create chef
+        this.alex = new ChefAlex(map, world);
+
     }
 
 }
