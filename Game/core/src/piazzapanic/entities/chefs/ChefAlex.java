@@ -52,12 +52,25 @@ public class ChefAlex extends ChefBase{
     private void checkUserInput(){
         float velX = 0, velY = 0;
 
+        // Up
         if(Gdx.input.isKeyPressed(Input.Keys.W)){
-            velY = 40f;
+            velY = 1;
+        }
+        // Down
+        if(Gdx.input.isKeyPressed(Input.Keys.S)){
+            velY = -1;
+        }
+        // Right
+        if(Gdx.input.isKeyPressed(Input.Keys.D)){
+            velX = 1;
+        }
+        // Left
+        if(Gdx.input.isKeyPressed(Input.Keys.A)){
+            velX = -1;
         }
 
         //Move the body
-        this.body.setLinearVelocity(velX, velY);
+        this.body.setLinearVelocity(velX * this.speed, velY * this.speed);
     }
 
 }

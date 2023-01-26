@@ -6,7 +6,7 @@ import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
 
 public abstract class ChefBase extends CharacterBase {
 
-    public Body b2body;
+    protected float speed = 500f;
 
     public ChefBase(TiledMap map, World world) {
         super(map, world);
