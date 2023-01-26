@@ -12,4 +12,7 @@ public abstract class ChefBase extends CharacterBase {
         super(map, world);
     }
 
+    public void update(){};
+
+
 }

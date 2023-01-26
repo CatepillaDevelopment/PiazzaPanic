@@ -40,6 +40,9 @@ public class GameScreen implements Screen{
     public void update(float dt){
         this.gameWorld.getGameLevel().getWorld().step(1/60f, 6, 2);
 
+        //update the current chef
+        this.gameWorld.getGameLevel().getCurrentChef().update();
+
         // Only render what the gameCam can see
         gameCam.update();
         gameWorld.getGameLevel().getRenderer().setView(gameCam);

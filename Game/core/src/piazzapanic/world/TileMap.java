@@ -22,11 +22,14 @@ public class TileMap {
     private TiledMap map;
     private OrthogonalTiledMapRenderer renderer;
 
-    private ChefBase alex;
+    private ChefBase currentChef;
 
     //Box2d variables
     private World world;
 
+    public ChefBase getCurrentChef() {
+        return currentChef;
+    }
 
     public World getWorld() {
         return world;
@@ -61,7 +64,7 @@ public class TileMap {
         new Toaster(5, map, world);
 
         // Create chef
-        this.alex = new ChefAlex(map, world);
+        this.currentChef = new ChefAlex(map, world);
 
     }
 
