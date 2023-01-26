@@ -52,6 +52,8 @@ public class TileMap {
         new Fryer(3, map, world);
         // Actually counter
         new Toaster(6, map, world);
+        // Actually wall
+        new Toaster(5, map, world);
     }
 
 }
