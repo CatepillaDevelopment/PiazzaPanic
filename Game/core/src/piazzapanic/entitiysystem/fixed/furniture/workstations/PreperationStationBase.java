@@ -1,15 +1,14 @@
-package piazzapanic.entitiysystem.fixed.workstations.workstationvariations;
+package piazzapanic.entitiysystem.fixed.furniture.workstations;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
+import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
 
-public abstract class PreperationStationBase extends FixedObjectBase {
+public abstract class PreperationStationBase extends WorkstationBase {
     protected Map<ItemBase, Integer> contents; 
 
     public PreperationStationBase(int layer){

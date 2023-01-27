@@ -1,11 +1,12 @@
 package piazzapanic.entitiysystem.dynamic.items;
 
-import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.physics.box2d.FixtureDef;
 import piazzapanic.entitiysystem.dynamic.DynamicObjectBase;
 import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
-import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.PreperationStationBase;
+import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
+
+import java.util.List;
 
 public abstract class ItemBase extends DynamicObjectBase {
     protected boolean ruined;
@@ -55,5 +56,10 @@ public abstract class ItemBase extends DynamicObjectBase {
 
     public void setPlacedOn(PreperationStationBase workstation){
         this.placedOn = workstation;
+    }
+
+    @Override
+    protected List<FixtureDef> getFixtureDefs() {
+        return null;
     }
 }

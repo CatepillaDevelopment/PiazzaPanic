@@ -1,10 +1,7 @@
 package piazzapanic.entities.stations.ingredientstations;
 
-import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.physics.box2d.World;
-import piazzapanic.entities.foods.ingredients.Lettuce;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.IngredientStationBase;
+import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
 
 public class LettuceStation extends IngredientStationBase{
 

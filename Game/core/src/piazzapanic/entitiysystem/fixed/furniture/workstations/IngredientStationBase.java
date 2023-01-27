@@ -1,12 +1,10 @@
-package piazzapanic.entitiysystem.fixed.workstations.workstationvariations;
+package piazzapanic.entitiysystem.fixed.furniture.workstations;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
+import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
 
 public abstract class IngredientStationBase extends WorkstationBase {
     protected List<IngredientBase> contents;

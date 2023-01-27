@@ -4,10 +4,8 @@ import piazzapanic.entities.stations.workstations.CuttingStation;
 import piazzapanic.entities.stations.workstations.Fryer;
 import piazzapanic.entities.stations.workstations.Grill;
 import piazzapanic.entities.stations.workstations.Toaster;
-import piazzapanic.entitiysystem.EntityBase;
 import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
-import piazzapanic.entitiysystem.dynamic.items.ItemBase;
-import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
+import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +23,7 @@ public class GameWorld {
         this.currentChef = null;
         this.tileMap =  new TileMap();
 
+        /*
         new CuttingStation(4);
         new Grill(2);
         new Fryer(3);
@@ -32,6 +31,7 @@ public class GameWorld {
         new Toaster(6);
         // Actually wall
         new Toaster(5);
+         */
 
         // Create chef
         this.currentChef = new ChefAlex();

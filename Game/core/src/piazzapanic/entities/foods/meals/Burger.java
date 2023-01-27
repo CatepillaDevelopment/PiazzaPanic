@@ -6,7 +6,7 @@ import piazzapanic.entities.foods.ingredients.Bun;
 import piazzapanic.entities.foods.ingredients.Patty;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.MealBase;
-import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.PreperationStationBase;
+import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
 
 public class Burger extends MealBase {
 
