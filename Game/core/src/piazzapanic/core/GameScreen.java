@@ -40,6 +40,8 @@ public class GameScreen implements Screen{
 
         //update the current chef
         this.gameWorld.getCurrentChef().update();
+        //update the HUD
+        this.hud.update(dt);
 
         // Only render what the gameCam can see
         gameCam.update();

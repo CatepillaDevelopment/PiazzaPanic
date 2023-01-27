@@ -15,12 +15,14 @@ public class GameHUD {
     public Stage stage;
     private Viewport viewport;
     private Integer timeCount;
+    private float timer;
     Label timeLabel;
     Label scoreLabel;
 
     GameHUD(SpriteBatch sb){
 
         this.timeCount = 0;
+        this.timer = 0;
 
         this.viewport = new FitViewport(Main.width, Main.height, new OrthographicCamera());
         this.stage = new Stage(this.viewport, sb);
@@ -44,6 +46,16 @@ public class GameHUD {
         // Add the table to the stage
         this.stage.addActor(table);
 
+    }
+
+    public void update(float dt){
+        this.timer += dt;
+        // If 1 second has passed
+        if(this.timer >= 1){
+            this.timeCount++;
+            this.scoreLabel.setText(String.format("%d", this.timeCount));
+            this.timer = 0;
+        }
     }
 
 }
