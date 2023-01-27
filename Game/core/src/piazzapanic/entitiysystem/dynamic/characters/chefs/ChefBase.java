@@ -8,8 +8,8 @@ public abstract class ChefBase extends CharacterBase {
 
     protected float speed = 500f;
 
-    public ChefBase(TiledMap map, World world) {
-        super(map, world);
+    public ChefBase() {
+
     }
 
     public void update(){};

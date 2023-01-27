@@ -13,8 +13,7 @@ import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 
 public class ChefAlex extends ChefBase{
 
-    public ChefAlex(TiledMap map, World world) {
-        super(map, world);
+    public ChefAlex() {
 
         // Draw Alex to the screen
         for(MapObject object : this.map.getLayers().get(7).getObjects()){

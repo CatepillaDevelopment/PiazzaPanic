@@ -13,8 +13,8 @@ public abstract class IngredientStationBase extends WorkstationBase {
 
     public abstract IngredientBase getIngredientType();
 
-    public IngredientStationBase(int layer, TiledMap map, World world){
-        super(layer, map, world);
+    public IngredientStationBase(int layer){
+        super(layer);
         this.contents = new ArrayList<>(4);
         this.contents.add(this.getIngredientType());
         this.contents.add(this.getIngredientType());

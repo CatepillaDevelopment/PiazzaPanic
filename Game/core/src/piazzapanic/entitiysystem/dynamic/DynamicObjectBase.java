@@ -8,7 +8,7 @@ import piazzapanic.entitiysystem.EntityBase;
 public abstract class DynamicObjectBase extends EntityBase {
 
 
-    public DynamicObjectBase(TiledMap map, World world) {
-        super(map, world);
+    public DynamicObjectBase() {
+
     }
 }

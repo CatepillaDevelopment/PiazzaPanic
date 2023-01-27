@@ -8,8 +8,8 @@ import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.Preper
 
 public class Fryer extends PreperationStationBase {
 
-    public Fryer(int layer, TiledMap map, World world) {
-        super(layer, map, world);
+    public Fryer(int layer) {
+        super(layer);
     }
 
     @Override

@@ -8,8 +8,8 @@ import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.Preper
 
 public class Grill extends PreperationStationBase {
 
-    public Grill(int layer, TiledMap map, World world) {
-        super(layer, map, world);
+    public Grill(int layer) {
+        super(layer);
     }
 
     @Override

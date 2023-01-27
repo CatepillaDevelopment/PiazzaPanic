@@ -8,8 +8,8 @@ import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.Ingred
 
 public class BunStation extends IngredientStationBase{
 
-    public BunStation(int layer, TiledMap map, World world) {
-        super(layer, map, world);
+    public BunStation(int layer) {
+        super(layer);
     }
 
     @Override

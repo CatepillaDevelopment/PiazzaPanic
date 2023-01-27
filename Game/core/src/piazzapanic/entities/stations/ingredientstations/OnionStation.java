@@ -8,8 +8,8 @@ import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.Ingred
 
 public class OnionStation extends IngredientStationBase{
 
-    public OnionStation(int layer, TiledMap map, World world) {
-        super(layer, map, world);
+    public OnionStation(int layer) {
+        super(layer);
     }
 
     @Override

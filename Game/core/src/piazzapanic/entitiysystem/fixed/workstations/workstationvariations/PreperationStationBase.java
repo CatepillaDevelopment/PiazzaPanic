@@ -12,8 +12,8 @@ import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 public abstract class PreperationStationBase extends FixedObjectBase {
     protected Map<ItemBase, Integer> contents; 
 
-    public PreperationStationBase(int layer, TiledMap map, World world){
-        super(layer, map, world);
+    public PreperationStationBase(int layer){
+        super(layer);
         contents = new HashMap<>();
     }
 

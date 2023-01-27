@@ -1,38 +1,39 @@
 package piazzapanic.world;
 import piazzapanic.entitiysystem.EntityBase;
+import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
+import piazzapanic.entitiysystem.dynamic.items.ItemBase;
+import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
 
 import java.util.ArrayList;
+import java.util.List;
 
+//this class should contain all the non LibGDX stuff
 public class GameWorld {
-
-    private ArrayList<EntityBase> tiles;
-    private ArrayList<EntityBase> workstations;
-    private ArrayList<EntityBase> characters;
-    private ArrayList<EntityBase> items;
-    private TileMap gameLevel;
+    private static TileMap tileMap = new TileMap();
+    private List<WorkstationBase> workstations;
+    private List<ChefBase> chefs;
+    private ChefBase currentChef;
 
     public GameWorld() {
-        this.gameLevel = new TileMap();
+        this.workstations = new ArrayList<>();
+        this.chefs = new ArrayList<>();
+        this.currentChef = null;
+    }
+
+    public ChefBase getCurrentChef() {
+        return this.currentChef;
     }
 
     // Getters
-    public TileMap getGameLevel() {
-        return gameLevel;
+    public static TileMap getTileMap() {
+        return tileMap;
     }
 
-    public ArrayList<EntityBase> getTiles() {
-        return tiles;
+    public List<WorkstationBase> getWorkstations() {
+        return this.workstations;
     }
 
-    public ArrayList<EntityBase> getWorkstations() {
-        return workstations;
-    }
-
-    public ArrayList<EntityBase> getCharacters() {
-        return characters;
-    }
-
-    public ArrayList<EntityBase> getItems() {
-        return items;
+    public List<ChefBase> getCharacters() {
+        return this.chefs;
     }
 }

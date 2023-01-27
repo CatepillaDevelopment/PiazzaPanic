@@ -3,15 +3,16 @@ package piazzapanic.entities.foods.ingredients;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
-public class Onion{
-/*
+public class Onion extends IngredientBase{
+
     @Override
     public String getName() {
         return "Onion";
     }
 
-
-
+    public Onion(FixedObjectBase spawnLocation) {
+        super(spawnLocation);
+    }
 
     @Override
     public String getTextureFilePath() {
@@ -37,5 +38,4 @@ public class Onion{
     public boolean canBeToasted() {
         return false;
     }
-*/
 }

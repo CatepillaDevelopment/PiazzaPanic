@@ -12,8 +12,8 @@ public abstract class ItemBase extends DynamicObjectBase {
     protected CharacterBase heldBy;
     protected FixedObjectBase placedOn;
     
-    public ItemBase(FixedObjectBase spawnLocation, TiledMap map, World world){
-        super(map, world);
+    public ItemBase(FixedObjectBase spawnLocation){
+        super();
         this.ruined = false;
         this.heldBy = null;
         this.placedOn = spawnLocation;

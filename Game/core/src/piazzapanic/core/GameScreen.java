@@ -2,9 +2,6 @@ package piazzapanic.core;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.maps.MapObject;
-import com.badlogic.gdx.maps.objects.RectangleMapObject;
-import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
@@ -38,14 +35,14 @@ public class GameScreen implements Screen{
     }
 
     public void update(float dt){
-        this.gameWorld.getGameLevel().getWorld().step(1/60f, 6, 2);
+        this.gameWorld.getTileMap().getWorld().step(1/60f, 6, 2);
 
         //update the current chef
-        this.gameWorld.getGameLevel().getCurrentChef().update();
+        this.gameWorld.getCurrentChef().update();
 
         // Only render what the gameCam can see
         gameCam.update();
-        gameWorld.getGameLevel().getRenderer().setView(gameCam);
+        gameWorld.getTileMap().getRenderer().setView(gameCam);
     }
 
     @Override
@@ -62,9 +59,9 @@ public class GameScreen implements Screen{
         */
 
         // Render the level
-        gameWorld.getGameLevel().getRenderer().render();
+        gameWorld.getTileMap().getRenderer().render();
         //render Box2DDebugLines
-        b2dr.render(gameWorld.getGameLevel().getWorld(), gameCam.combined);
+        b2dr.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
     }
 
     @Override

@@ -13,8 +13,8 @@ public abstract class MealBase extends ItemBase {
     protected Stack<IngredientBase> stepsLeftToComplete;
     protected List<IngredientBase> contents;
 
-    public MealBase(FixedObjectBase spawnLocation, TiledMap map, World world) {
-        super(spawnLocation, map, world);
+    public MealBase(FixedObjectBase spawnLocation) {
+        super(spawnLocation);
         this.contents = null;
         this.stepsLeftToComplete = this.getRecipe();
     }

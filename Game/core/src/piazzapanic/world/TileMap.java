@@ -16,6 +16,7 @@ import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.workstations.WorkstationBase;
 
+//this class should ONLY contain LibGDX stuff
 public class TileMap {
 
     private TmxMapLoader mapLoader;
@@ -26,10 +27,6 @@ public class TileMap {
 
     //Box2d variables
     private World world;
-
-    public ChefBase getCurrentChef() {
-        return currentChef;
-    }
 
     public World getWorld() {
         return world;
@@ -48,23 +45,23 @@ public class TileMap {
     }
 
     public TileMap(){
-        mapLoader = new TmxMapLoader();
-        map = mapLoader.load("gameLevel/Level.tmx");
-        renderer = new OrthogonalTiledMapRenderer(map);
+        this.mapLoader = new TmxMapLoader();
+        this.map = mapLoader.load("gameLevel/Level.tmx");
+        this.renderer = new OrthogonalTiledMapRenderer(map);
 
         //no gravity
-        world = new World(new Vector2(0, 0), true);
+        this.world = new World(new Vector2(0, 0), true);
 
-        new CuttingStation(4, map, world);
-        new Grill(2, map, world);
-        new Fryer(3, map, world);
+        new CuttingStation(4);
+        new Grill(2);
+        new Fryer(3);
         // Actually counter
-        new Toaster(6, map, world);
+        new Toaster(6);
         // Actually wall
-        new Toaster(5, map, world);
+        new Toaster(5);
 
         // Create chef
-        this.currentChef = new ChefAlex(map, world);
+        this.currentChef = new ChefAlex();
 
     }
 

@@ -8,8 +8,8 @@ import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.Preper
 
 public class Toaster extends PreperationStationBase {
 
-    public Toaster(int layer, TiledMap map, World world) {
-        super(layer, map, world);
+    public Toaster(int layer) {
+        super(layer);
     }
 
     @Override
