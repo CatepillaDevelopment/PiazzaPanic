@@ -23,8 +23,6 @@ public class TileMap {
     private TiledMap map;
     private OrthogonalTiledMapRenderer renderer;
 
-    private ChefBase currentChef;
-
     //Box2d variables
     private World world;
 
@@ -52,16 +50,16 @@ public class TileMap {
         //no gravity
         this.world = new World(new Vector2(0, 0), true);
 
-        new CuttingStation(4);
-        new Grill(2);
-        new Fryer(3);
+        //new CuttingStation(4);
+        //new Grill(2);
+        //new Fryer(3);
         // Actually counter
-        new Toaster(6);
+        //new Toaster(6);
         // Actually wall
-        new Toaster(5);
+        ///new Toaster(5);
 
         // Create chef
-        this.currentChef = new ChefAlex();
+        //this.currentChef = new ChefAlex();
 
     }
 
