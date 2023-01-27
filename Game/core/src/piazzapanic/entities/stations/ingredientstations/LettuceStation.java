@@ -8,8 +8,8 @@ import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.Ingred
 
 public class LettuceStation extends IngredientStationBase{
 
-    public LettuceStation(int layer, TiledMap map, World world) {
-        super(layer, map, world);
+    public LettuceStation(int layer) {
+        super(layer);
     }
 
     @Override

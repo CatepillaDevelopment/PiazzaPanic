@@ -12,8 +12,8 @@ public class Bun extends IngredientBase {
         return "Bun";
     }
 
-    public Bun(FixedObjectBase spawnLocation, TiledMap map, World world) {
-        super(spawnLocation, map, world);
+    public Bun(FixedObjectBase spawnLocation) {
+        super(spawnLocation);
     }
 
     @Override

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="8" height="6" tilewidth="200" tileheight="200" infinite="0" nextlayerid="9" nextobjectid="13">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="8" height="6" tilewidth="200" tileheight="200" infinite="0" nextlayerid="10" nextobjectid="14">
  <tileset firstgid="1" source="KitchenTiles.tsx"/>
  <tileset firstgid="3" source="wallPaper.tsx"/>
  <tileset firstgid="4" source="counter.tsx"/>
@@ -43,5 +43,8 @@
  </objectgroup>
  <objectgroup id="3" name="counter">
   <object id="2" x="1218.19" y="196.219" width="182.592" height="997.445"/>
+ </objectgroup>
+ <objectgroup id="9" name="chef">
+  <object id="13" name="Alex" x="400" y="600" width="200" height="200"/>
  </objectgroup>
 </map>

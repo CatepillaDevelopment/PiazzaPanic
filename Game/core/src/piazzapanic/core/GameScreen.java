@@ -26,6 +26,7 @@ public class GameScreen implements Screen{
         // Create the world and lock the camera into the middle
         this.gameWorld = new GameWorld();
         gameCam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() / 2, 0);
+
     }
 
     @Override
@@ -34,13 +35,19 @@ public class GameScreen implements Screen{
     }
 
     public void update(float dt){
+        this.gameWorld.getTileMap().getWorld().step(1/60f, 6, 2);
+
+        //update the current chef
+        this.gameWorld.getCurrentChef().update();
+
         // Only render what the gameCam can see
         gameCam.update();
-        gameWorld.getGameLevel().getRenderer().setView(gameCam);
+        gameWorld.getTileMap().getRenderer().setView(gameCam);
     }
 
     @Override
     public void render(float delta) {
+        //separate update logic from render
         update(delta);
 
         ScreenUtils.clear(0, 0, 0, 1);
@@ -52,9 +59,9 @@ public class GameScreen implements Screen{
         */
 
         // Render the level
-        gameWorld.getGameLevel().getRenderer().render();
+        gameWorld.getTileMap().getRenderer().render();
         //render Box2DDebugLines
-        b2dr.render(gameWorld.getGameLevel().getWorld(), gameCam.combined);
+        b2dr.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
     }
 
     @Override

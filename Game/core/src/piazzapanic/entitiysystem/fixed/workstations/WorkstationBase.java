@@ -6,8 +6,10 @@ import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
 public abstract class WorkstationBase extends FixedObjectBase {
     //Layer defines the object layer
-    public WorkstationBase(int layer, TiledMap map, World world){
-        super(layer, map, world);
+    public WorkstationBase(int layer){
+        super(layer);
+
+
 
     }
 }

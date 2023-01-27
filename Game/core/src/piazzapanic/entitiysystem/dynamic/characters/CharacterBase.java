@@ -7,7 +7,6 @@ import piazzapanic.entitiysystem.dynamic.DynamicObjectBase;
 public abstract class CharacterBase extends DynamicObjectBase {
 
 
-    public CharacterBase(TiledMap map, World world) {
-        super(map, world);
+    public CharacterBase() {
     }
 }

@@ -6,8 +6,8 @@ import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 
 public class ChefSteve extends ChefBase{
 
-    public ChefSteve(TiledMap map, World world) {
-        super(map, world);
+    public ChefSteve() {
+
     }
 
     @Override

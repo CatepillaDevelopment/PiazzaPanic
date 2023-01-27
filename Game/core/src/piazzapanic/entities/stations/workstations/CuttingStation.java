@@ -8,8 +8,8 @@ import piazzapanic.entitiysystem.fixed.workstations.workstationvariations.Preper
 
 public class CuttingStation extends PreperationStationBase {
 
-    public CuttingStation(int layer, TiledMap map, World world) {
-        super(layer, map, world);
+    public CuttingStation(int layer) {
+        super(layer);
     }
 
     @Override

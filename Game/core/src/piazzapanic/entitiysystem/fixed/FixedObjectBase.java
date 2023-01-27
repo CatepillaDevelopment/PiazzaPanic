@@ -10,8 +10,7 @@ import piazzapanic.entitiysystem.EntityBase;
 
 public abstract class FixedObjectBase extends EntityBase {
     //layer defines the object layer
-    public FixedObjectBase(int layer, TiledMap map, World world){
-        super(map, world);
+    public FixedObjectBase(int layer){
 
         // Loop through all fixed objects in a layer
         for(MapObject object : this.map.getLayers().get(layer).getObjects().getByType(RectangleMapObject.class)){

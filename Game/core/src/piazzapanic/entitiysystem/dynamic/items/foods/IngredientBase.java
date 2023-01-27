@@ -12,8 +12,8 @@ public abstract class IngredientBase extends ItemBase {
     protected boolean toasted;
     protected MealBase inMeal;
 
-    public IngredientBase(FixedObjectBase spawnLocation, TiledMap map, World world) {
-        super(spawnLocation, map, world);
+    public IngredientBase(FixedObjectBase spawnLocation) {
+        super(spawnLocation);
         this.chopped = false;
         this.fried = false;
         this.grilled = false;
