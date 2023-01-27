@@ -12,13 +12,11 @@ public class GameScreen implements Screen{
 
     final Main game;
     private Box2DDebugRenderer b2dr;
-    Texture texture;
     private OrthographicCamera gameCam;
     private Viewport gamePort;
     private GameWorld gameWorld;
     public GameScreen(Main game){
         this.game = game;
-        texture = new Texture("badlogic.jpg");
         gameCam = new OrthographicCamera();
         gamePort = new StretchViewport(this.game.width, this.game.height, gameCam);
         this.b2dr = new Box2DDebugRenderer();
@@ -50,6 +48,7 @@ public class GameScreen implements Screen{
         //separate update logic from render
         update(delta);
 
+        // clear the screen
         ScreenUtils.clear(0, 0, 0, 1);
         /*
         this.game.batch.setProjectionMatrix(gameCam.combined);
