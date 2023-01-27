@@ -15,11 +15,14 @@ public class GameScreen implements Screen{
     private OrthographicCamera gameCam;
     private Viewport gamePort;
     private GameWorld gameWorld;
+    private GameHUD hud;
+
     public GameScreen(Main game){
         this.game = game;
         gameCam = new OrthographicCamera();
         gamePort = new StretchViewport(this.game.width, this.game.height, gameCam);
         this.b2dr = new Box2DDebugRenderer();
+        this.hud = new GameHUD(this.game.batch);
 
         // Create the world and lock the camera into the middle
         this.gameWorld = new GameWorld();
@@ -50,6 +53,7 @@ public class GameScreen implements Screen{
 
         // clear the screen
         ScreenUtils.clear(0, 0, 0, 1);
+
         /*
         this.game.batch.setProjectionMatrix(gameCam.combined);
         this.game.batch.begin();
@@ -61,6 +65,10 @@ public class GameScreen implements Screen{
         gameWorld.getTileMap().getRenderer().render();
         //render Box2DDebugLines
         b2dr.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
+
+        // Draw the HUD
+        this.game.batch.setProjectionMatrix(this.hud.stage.getCamera().combined);
+        this.hud.stage.draw();
     }
 
     @Override
