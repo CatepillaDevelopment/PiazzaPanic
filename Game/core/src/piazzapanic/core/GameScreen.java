@@ -42,7 +42,7 @@ public class GameScreen implements Screen{
         this.gameWorld.getTileMap().getWorld().step(1/60f, 6, 2);
 
         //update the current chef
-        //this.gameWorld.getCurrentChef().update();
+        this.gameWorld.getCurrentChef().update();
 
         // Only render what the gameCam can see
         gameCam.update();

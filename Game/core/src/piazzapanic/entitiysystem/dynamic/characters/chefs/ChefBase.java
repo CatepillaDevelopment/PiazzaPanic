@@ -1,5 +1,7 @@
 package piazzapanic.entitiysystem.dynamic.characters.chefs;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.physics.box2d.*;
 import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
 
@@ -38,6 +40,35 @@ public abstract class ChefBase extends CharacterBase {
     @Override
     protected List<FixtureDef> getFixtureDefs() {
         return null;
+    }
+
+    public void update(){
+        checkUserInput();
+    }
+
+
+    private void checkUserInput(){
+        float velX = 0, velY = 0;
+
+        // Up
+        if(Gdx.input.isKeyPressed(Input.Keys.W)){
+            velY = 1;
+        }
+        // Down
+        if(Gdx.input.isKeyPressed(Input.Keys.S)){
+            velY = -1;
+        }
+        // Right
+        if(Gdx.input.isKeyPressed(Input.Keys.D)){
+            velX = 1;
+        }
+        // Left
+        if(Gdx.input.isKeyPressed(Input.Keys.A)){
+            velX = -1;
+        }
+
+        //Move the body
+        this.body.setLinearVelocity(velX * this.speed, velY * this.speed);
     }
 
 }
