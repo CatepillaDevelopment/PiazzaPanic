@@ -84,6 +84,7 @@ public class GameScreen implements Screen{
             }
         }
 
+        //create chef objects
         for (ChefBase chef : this.gameWorld.getCharacters()){
             bdef.type = BodyDef.BodyType.DynamicBody;
             bdef.position.set(chef.getXval() + chef.getW() / 2, chef.getYval() + chef.getH() / 2);
