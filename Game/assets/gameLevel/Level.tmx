@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="8" height="6" tilewidth="200" tileheight="200" infinite="0" nextlayerid="10" nextobjectid="14">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="8" height="6" tilewidth="200" tileheight="200" infinite="0" nextlayerid="12" nextobjectid="25">
  <tileset firstgid="1" source="KitchenTiles.tsx"/>
  <tileset firstgid="3" source="wallPaper.tsx"/>
  <tileset firstgid="4" source="counter.tsx"/>
@@ -24,20 +24,16 @@
 0,0,0,0,0,0,6,0
 </data>
  </layer>
- <objectgroup id="6" name="baking">
-  <object id="4" x="0" y="198.944" width="196.219" height="136.263"/>
-  <object id="8" x="599.557" y="200" width="200.443" height="140.657"/>
- </objectgroup>
- <objectgroup id="7" name="frying">
-  <object id="6" x="201.669" y="200" width="198.331" height="135.207"/>
-  <object id="9" x="795.776" y="200" width="204.224" height="143.383"/>
- </objectgroup>
- <objectgroup id="8" name="cutting">
-  <object id="7" x="400.613" y="200" width="199.387" height="137.932"/>
-  <object id="10" x="1000.17" y="200" width="199.83" height="140.657"/>
+ <objectgroup id="11" name="workstations">
+  <object id="18" name="baking" x="0" y="200" width="200"/>
+  <object id="20" name="frying" x="200" y="200" width="200"/>
+  <object id="21" name="chopping" x="400" y="200" width="200"/>
+  <object id="22" name="baking" x="600" y="200" width="200"/>
+  <object id="23" name="frying" x="800" y="200" width="200"/>
+  <object id="24" name="chopping" x="1000" y="200" width="200"/>
  </objectgroup>
  <objectgroup id="5" name="wall">
-  <object id="3" x="0" y="0" width="1600" height="200"/>
+  <object id="3" x="0" y="0" width="1600" height="100"/>
   <object id="11" x="0" y="200" height="1000"/>
   <object id="12" x="0" y="1200" width="1600"/>
  </objectgroup>

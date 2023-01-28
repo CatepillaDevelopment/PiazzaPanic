@@ -1,7 +1,10 @@
 package piazzapanic.core;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
+import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.maps.objects.RectangleMapObject;
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
@@ -25,6 +28,7 @@ public class GameScreen implements Screen{
         this.gameWorld = new GameWorld();
         gameCam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() / 2, 0);
 
+        createObjects();
     }
 
     @Override
@@ -54,6 +58,29 @@ public class GameScreen implements Screen{
         gameWorld.getTileMap().getRenderer().render();
         //render Box2DDebugLines
         box2DDebugRenderer.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
+    }
+    public void createObjects(){
+
+        BodyDef bdef = new BodyDef();
+        PolygonShape shape = new PolygonShape();
+        FixtureDef fdef = new FixtureDef();
+        Body body;
+
+        // Create static map objects
+        for(int i = 2; i < 6; i++) {
+            for (MapObject object : GameWorld.getTileMap().getMap().getLayers().get(i).getObjects().getByType(RectangleMapObject.class)) {
+                Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+                bdef.type = BodyDef.BodyType.StaticBody;
+                bdef.position.set(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.getHeight() / 2);
+
+                body = GameWorld.getTileMap().getWorld().createBody(bdef);
+
+                shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
+                fdef.shape = shape;
+                body.createFixture(fdef);
+            }
+        }
     }
 
     @Override
