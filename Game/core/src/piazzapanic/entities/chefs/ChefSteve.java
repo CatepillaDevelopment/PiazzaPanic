@@ -7,7 +7,8 @@ import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 public class ChefSteve extends ChefBase{
 
     public ChefSteve() {
-
+        this.xval = 800;
+        this.yval = 600;
     }
 
     @Override

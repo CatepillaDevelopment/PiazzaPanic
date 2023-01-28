@@ -1,5 +1,6 @@
 package piazzapanic.world;
 import piazzapanic.entities.chefs.ChefAlex;
+import piazzapanic.entities.chefs.ChefSteve;
 import piazzapanic.entities.stations.workstations.CuttingStation;
 import piazzapanic.entities.stations.workstations.Fryer;
 import piazzapanic.entities.stations.workstations.Grill;
@@ -33,8 +34,10 @@ public class GameWorld {
         new Toaster(5);
          */
 
-        // Create chef
-        this.currentChef = new ChefAlex();
+        // Create chefs (index 0 = Alex, index 1 = Steve)
+        this.chefs.add(new ChefAlex());
+        this.chefs.add(new ChefSteve());
+        this.currentChef = this.chefs.get(0);
     }
 
     public ChefBase getCurrentChef() {

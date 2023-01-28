@@ -9,6 +9,8 @@ import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import piazzapanic.entities.chefs.ChefAlex;
+import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 import piazzapanic.world.GameWorld;
 
 public class GameScreen implements Screen{
@@ -67,7 +69,7 @@ public class GameScreen implements Screen{
         Body body;
 
         // Create static map objects
-        for(int i = 2; i < 6; i++) {
+        for(int i = 2; i < 5; i++) {
             for (MapObject object : GameWorld.getTileMap().getMap().getLayers().get(i).getObjects().getByType(RectangleMapObject.class)) {
                 Rectangle rect = ((RectangleMapObject) object).getRectangle();
 
@@ -81,6 +83,18 @@ public class GameScreen implements Screen{
                 body.createFixture(fdef);
             }
         }
+
+        for (ChefBase chef : this.gameWorld.getCharacters()){
+            bdef.type = BodyDef.BodyType.DynamicBody;
+            bdef.position.set(chef.getXval() + chef.getW() / 2, chef.getYval() + chef.getH() / 2);
+
+            chef.body = GameWorld.getTileMap().getWorld().createBody(bdef);
+
+            shape.setAsBox(chef.getW() / 2, chef.getH() / 2);
+            fdef.shape = shape;
+            chef.body.createFixture(fdef);
+        }
+
     }
 
     @Override

@@ -7,10 +7,13 @@ import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
+import piazzapanic.world.GameWorld;
 
 public class ChefAlex extends ChefBase{
 
     public ChefAlex() {
+        this.xval = 400;
+        this.yval = 600;
     }
 
     @Override

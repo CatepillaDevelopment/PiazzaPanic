@@ -20,22 +20,10 @@ public abstract class EntityBase extends Sprite {
 
 
     // Ben's stuff
-    protected Body body;
+    public Body body;
 
     public EntityBase(){
-        this.name = this.getName();
 
-        World world = GameWorld.getTileMap().getWorld();
-        BodyDef bodyDef = this.getBodyDef();
-        List<FixtureDef> fixtureDefs = this.getFixtureDefs();
-
-        this.body = world.createBody(bodyDef);
-        //add all fixtures
-        if (fixtureDefs != null){
-            for (FixtureDef fixtureDef : fixtureDefs) {
-                this.body.createFixture(fixtureDef);
-            }
-        }
     }
 
     public File getTextureFile() throws FileNotFoundException{
