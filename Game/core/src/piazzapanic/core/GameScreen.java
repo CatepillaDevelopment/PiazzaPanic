@@ -1,4 +1,6 @@
 package piazzapanic.core;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -64,6 +66,7 @@ public class GameScreen implements Screen{
         gameWorld.getTileMap().getRenderer().render();
         //render Box2DDebugLines
         box2DDebugRenderer.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
+        // Render chefs
         this.game.batch.begin();
         for (ChefBase chef : this.gameWorld.getCharacters()) {
             sprite = new Sprite(chef.getTexture());
@@ -72,7 +75,11 @@ public class GameScreen implements Screen{
             sprite.draw(game.batch);
         }
         this.game.batch.end();
-
+        // Switch chef
+        if (Gdx.input.isKeyJustPressed(Input.Keys.E)) {
+            gameWorld.getCurrentChef().getBody().setLinearVelocity(0,0);
+            gameWorld.setCurrentChef(gameWorld.getCurrentChef() == gameWorld.getCharacters().get(1) ? 0 : 1);
+        }
         // Draw the HUD
         this.game.batch.setProjectionMatrix(this.hud.stage.getCamera().combined);
         this.hud.stage.draw();

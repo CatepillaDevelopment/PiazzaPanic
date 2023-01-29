@@ -24,6 +24,10 @@ public abstract class ChefBase extends CharacterBase {
         return h;
     }
 
+    @Override
+    public Body getBody() {
+        return body;
+    }
 
     public abstract int getXval();
 
@@ -35,12 +39,12 @@ public abstract class ChefBase extends CharacterBase {
     protected FixtureDef fdef;
     protected Body body;
 
-    public ChefBase() {
-        createDynamicObject();
+    public ChefBase(int x, int y) {
+        createDynamicObject(x, y);
         System.out.println(this.getXval());
     }
 
-    public void createDynamicObject(){
+    public void createDynamicObject(int x, int y){
         bdef = new BodyDef();
         shape = new PolygonShape();
         fdef = new FixtureDef();
@@ -48,7 +52,7 @@ public abstract class ChefBase extends CharacterBase {
 
         //create chef objects
         bdef.type = BodyDef.BodyType.DynamicBody;
-        bdef.position.set(getXval() + getW() / 2, getYval() + getH() / 2);
+        bdef.position.set(x + getW() / 2, y + getH() / 2);
 
         body = GameWorld.getTileMap().getWorld().createBody(bdef);
 

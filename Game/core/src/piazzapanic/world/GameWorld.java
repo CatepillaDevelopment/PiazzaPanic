@@ -62,4 +62,8 @@ public class GameWorld {
     public List<ChefBase> getCharacters() {
         return this.chefs;
     }
+
+    public void setCurrentChef(int i) {
+        this.currentChef = this.chefs.get(i);
+    }
 }

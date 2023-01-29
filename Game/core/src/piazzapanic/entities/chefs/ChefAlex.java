@@ -25,6 +25,7 @@ public class ChefAlex extends ChefBase{
     }
 
     public ChefAlex() {
+        super(400, 600);
         this.xval = 400;
         this.yval = 600;
         this.texture = new Texture(Gdx.files.internal("chefs/Alex.png"));

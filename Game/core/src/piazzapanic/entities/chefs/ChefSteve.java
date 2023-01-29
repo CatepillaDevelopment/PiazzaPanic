@@ -21,6 +21,7 @@ public class ChefSteve extends ChefBase{
     }
 
     public ChefSteve() {
+        super(800, 600);
         this.xval = 800;
         this.yval = 600;
         this.texture = new Texture(Gdx.files.internal("chefs/Steve.png"));
