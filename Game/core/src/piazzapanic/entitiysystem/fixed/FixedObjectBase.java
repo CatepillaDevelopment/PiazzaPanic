@@ -7,13 +7,16 @@ import com.badlogic.gdx.physics.box2d.*;
 import piazzapanic.entitiysystem.EntityBase;
 import piazzapanic.world.GameWorld;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class FixedObjectBase extends EntityBase {
 
     protected BodyDef bdef;
     protected PolygonShape shape;
     protected FixtureDef fdef;
     protected Body body;
-    protected Fixture fixture;
+    protected List<Fixture> fixtures;
 
     //layer defines the object layer
     public FixedObjectBase(int layer){
@@ -21,6 +24,7 @@ public abstract class FixedObjectBase extends EntityBase {
         this.bdef = new BodyDef();
         this.shape = new PolygonShape();
         this.fdef = new FixtureDef();
+        this.fixtures = new ArrayList();
 
         createStaticObject();
 
@@ -37,7 +41,7 @@ public abstract class FixedObjectBase extends EntityBase {
 
             shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
             fdef.shape = shape;
-            fixture = body.createFixture(fdef);
+            fixtures.add(body.createFixture(fdef));
         }
     }
 
@@ -48,5 +52,9 @@ public abstract class FixedObjectBase extends EntityBase {
         bodyDef.type = BodyDef.BodyType.StaticBody;
 
         return bodyDef;
+    }
+
+    public List<Fixture> getFixtures(){
+        return this.fixtures;
     }
 }

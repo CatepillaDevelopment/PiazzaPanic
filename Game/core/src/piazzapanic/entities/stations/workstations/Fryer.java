@@ -4,6 +4,7 @@ import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
@@ -13,7 +14,8 @@ public class Fryer extends PreperationStationBase {
 
     public Fryer(int layer) {
         super(layer);
-        fixture.setUserData(this);
+        for(Fixture fixture : fixtures)
+            fixture.setUserData(this);
     }
 
 

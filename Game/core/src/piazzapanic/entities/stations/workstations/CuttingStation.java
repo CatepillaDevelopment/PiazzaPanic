@@ -8,12 +8,14 @@ import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
 import piazzapanic.world.GameWorld;
+import com.badlogic.gdx.physics.box2d.*;
 
 public class CuttingStation extends PreperationStationBase {
 
     public CuttingStation(int layer) {
         super(layer);
-        fixture.setUserData(this);
+        for(Fixture fixture : fixtures)
+            fixture.setUserData(this);
     }
 
 
