@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.physics.box2d.*;
 import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
+import piazzapanic.world.GameWorld;
 
 import java.util.List;
 
@@ -24,18 +25,40 @@ public abstract class ChefBase extends CharacterBase {
     }
 
 
-    public int getXval() {
-        return xval;
-    }
+    public abstract int getXval();
 
 
-    public int getYval() {
-        return yval;
-    }
+    public abstract int getYval();
+
+    protected BodyDef bdef;
+    protected PolygonShape shape;
+    protected FixtureDef fdef;
+    protected Body body;
 
     public ChefBase() {
-
+        createDynamicObject();
+        System.out.println(this.getXval());
     }
+
+    public void createDynamicObject(){
+        bdef = new BodyDef();
+        shape = new PolygonShape();
+        fdef = new FixtureDef();
+
+
+        //create chef objects
+        bdef.type = BodyDef.BodyType.DynamicBody;
+        bdef.position.set(getXval() + getW() / 2, getYval() + getH() / 2);
+
+        body = GameWorld.getTileMap().getWorld().createBody(bdef);
+
+        shape.setAsBox(getW() / 2, getH() / 2);
+        fdef.shape = shape;
+        body.createFixture(fdef);
+
+        body.setUserData(getName());
+
+}
 
     @Override
     protected List<FixtureDef> getFixtureDefs() {

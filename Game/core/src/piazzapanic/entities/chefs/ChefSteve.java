@@ -6,6 +6,16 @@ import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 
 public class ChefSteve extends ChefBase{
 
+    @Override
+    public int getXval() {
+        return this.xval;
+    }
+
+    @Override
+    public int getYval() {
+        return this.yval;
+    }
+
     public ChefSteve() {
         this.xval = 800;
         this.yval = 600;

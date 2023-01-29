@@ -11,6 +11,16 @@ import piazzapanic.world.GameWorld;
 
 public class ChefAlex extends ChefBase{
 
+    @Override
+    public int getXval() {
+        return this.xval;
+    }
+
+    @Override
+    public int getYval() {
+        return this.yval;
+    }
+
     public ChefAlex() {
         this.xval = 400;
         this.yval = 600;

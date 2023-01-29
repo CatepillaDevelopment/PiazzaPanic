@@ -30,7 +30,6 @@ public class GameScreen implements Screen{
         this.gameWorld = new GameWorld();
         gameCam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() / 2, 0);
 
-        createObjects();
     }
 
     @Override
@@ -60,29 +59,6 @@ public class GameScreen implements Screen{
         gameWorld.getTileMap().getRenderer().render();
         //render Box2DDebugLines
         box2DDebugRenderer.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
-    }
-    public void createObjects(){
-
-        BodyDef bdef = new BodyDef();
-        PolygonShape shape = new PolygonShape();
-        FixtureDef fdef = new FixtureDef();
-        Body body;
-
-
-        //create chef objects
-        for (ChefBase chef : this.gameWorld.getCharacters()){
-            bdef.type = BodyDef.BodyType.DynamicBody;
-            bdef.position.set(chef.getXval() + chef.getW() / 2, chef.getYval() + chef.getH() / 2);
-
-            chef.body = GameWorld.getTileMap().getWorld().createBody(bdef);
-
-            shape.setAsBox(chef.getW() / 2, chef.getH() / 2);
-            fdef.shape = shape;
-            chef.body.createFixture(fdef);
-
-            chef.body.setUserData("chef");
-        }
-
     }
 
     @Override
