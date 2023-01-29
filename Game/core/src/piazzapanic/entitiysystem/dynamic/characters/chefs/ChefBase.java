@@ -90,6 +90,8 @@ public abstract class ChefBase extends CharacterBase {
 
         //Move the body
         this.body.setLinearVelocity(velX * this.speed, velY * this.speed);
+        this.xval = (int) this.body.getPosition().x;
+        this.yval = (int) this.body.getPosition().y;
     }
 
 }
