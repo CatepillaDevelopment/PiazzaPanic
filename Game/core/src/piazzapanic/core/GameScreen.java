@@ -59,6 +59,11 @@ public class GameScreen implements Screen{
         gameWorld.getTileMap().getRenderer().render();
         //render Box2DDebugLines
         box2DDebugRenderer.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
+        this.game.batch.begin();
+        for (ChefBase chef : this.gameWorld.getCharacters()) {
+            this.game.batch.draw(chef.getTexture(), chef.getXval(), chef.getYval());
+        }
+        this.game.batch.end();
     }
 
     @Override
