@@ -13,6 +13,7 @@ public class Toaster extends PreperationStationBase {
 
     public Toaster(int layer) {
         super(layer);
+        fixture.setUserData(this);
     }
 
 
@@ -47,6 +48,11 @@ public class Toaster extends PreperationStationBase {
     @Override
     public int getPrecisionTime() {
         return 5;
+    }
+
+    @Override
+    public void onHit() {
+        System.out.println("Toaster station hit");
     }
 
 }

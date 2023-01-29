@@ -3,10 +3,7 @@ package piazzapanic.entitiysystem.fixed;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.PolygonShape;
+import com.badlogic.gdx.physics.box2d.*;
 import piazzapanic.entitiysystem.EntityBase;
 import piazzapanic.world.GameWorld;
 
@@ -16,6 +13,7 @@ public abstract class FixedObjectBase extends EntityBase {
     protected PolygonShape shape;
     protected FixtureDef fdef;
     protected Body body;
+    protected Fixture fixture;
 
     //layer defines the object layer
     public FixedObjectBase(int layer){
@@ -39,7 +37,7 @@ public abstract class FixedObjectBase extends EntityBase {
 
             shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
             fdef.shape = shape;
-            body.createFixture(fdef);
+            fixture = body.createFixture(fdef);
         }
     }
 

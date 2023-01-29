@@ -54,9 +54,7 @@ public abstract class ChefBase extends CharacterBase {
 
         shape.setAsBox(getW() / 2, getH() / 2);
         fdef.shape = shape;
-        body.createFixture(fdef);
-
-        body.setUserData(getName());
+        body.createFixture(fdef).setUserData("chef");
 
 }
 

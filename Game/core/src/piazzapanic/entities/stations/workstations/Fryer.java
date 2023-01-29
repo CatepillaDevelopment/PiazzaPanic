@@ -13,6 +13,7 @@ public class Fryer extends PreperationStationBase {
 
     public Fryer(int layer) {
         super(layer);
+        fixture.setUserData(this);
     }
 
 
@@ -46,6 +47,11 @@ public class Fryer extends PreperationStationBase {
     @Override
     public int getPrecisionTime() {
         return 5;
+    }
+
+    @Override
+    public void onHit() {
+        System.out.println("Fryer station hit");
     }
 
 }

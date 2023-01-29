@@ -42,6 +42,8 @@ public class GameWorld {
         this.chefs.add(new ChefAlex());
         this.chefs.add(new ChefSteve());
         this.currentChef = this.chefs.get(0);
+
+        tileMap.getWorld().setContactListener(new WorldContactListener());
     }
 
     public ChefBase getCurrentChef() {
