@@ -68,21 +68,6 @@ public class GameScreen implements Screen{
         FixtureDef fdef = new FixtureDef();
         Body body;
 
-        // Create static map objects
-        for(int i = 2; i < 5; i++) {
-            for (MapObject object : GameWorld.getTileMap().getMap().getLayers().get(i).getObjects().getByType(RectangleMapObject.class)) {
-                Rectangle rect = ((RectangleMapObject) object).getRectangle();
-
-                bdef.type = BodyDef.BodyType.StaticBody;
-                bdef.position.set(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.getHeight() / 2);
-
-                body = GameWorld.getTileMap().getWorld().createBody(bdef);
-
-                shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
-                fdef.shape = shape;
-                body.createFixture(fdef);
-            }
-        }
 
         //create chef objects
         for (ChefBase chef : this.gameWorld.getCharacters()){
@@ -94,6 +79,8 @@ public class GameScreen implements Screen{
             shape.setAsBox(chef.getW() / 2, chef.getH() / 2);
             fdef.shape = shape;
             chef.body.createFixture(fdef);
+
+            chef.body.setUserData("chef");
         }
 
     }

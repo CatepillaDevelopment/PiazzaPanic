@@ -1,8 +1,13 @@
 package piazzapanic.entities.stations.workstations;
 
+import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.maps.objects.RectangleMapObject;
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.physics.box2d.BodyDef;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
+import piazzapanic.world.GameWorld;
 
 public class Fryer extends PreperationStationBase {
 
@@ -10,9 +15,10 @@ public class Fryer extends PreperationStationBase {
         super(layer);
     }
 
+
     @Override
     public String getName() {
-        return "Fryer";
+        return "frying";
     }
 
     @Override

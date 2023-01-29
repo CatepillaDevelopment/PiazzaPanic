@@ -10,6 +10,11 @@ public class BunStation extends IngredientStationBase{
     }
 
     @Override
+    public void createStaticObject() {
+
+    }
+
+    @Override
     public IngredientBase getIngredientType() {
         //return new Bun(this);
         return null;

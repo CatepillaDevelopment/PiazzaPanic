@@ -24,6 +24,10 @@ public class GameWorld {
         this.currentChef = null;
         this.tileMap =  new TileMap();
 
+        // layer not necessary anymore
+        workstations.add(new CuttingStation(0));
+        workstations.add(new Fryer(0));
+        workstations.add(new Grill(0));
         /*
         new CuttingStation(4);
         new Grill(2);

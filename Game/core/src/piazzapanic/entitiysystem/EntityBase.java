@@ -20,6 +20,7 @@ public abstract class EntityBase extends Sprite {
 
 
     // Ben's stuff
+    // public because code was buggin
     public Body body;
 
     public EntityBase(){

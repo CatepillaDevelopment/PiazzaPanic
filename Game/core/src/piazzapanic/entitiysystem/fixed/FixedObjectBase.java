@@ -3,13 +3,44 @@ package piazzapanic.entitiysystem.fixed;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.badlogic.gdx.physics.box2d.PolygonShape;
 import piazzapanic.entitiysystem.EntityBase;
+import piazzapanic.world.GameWorld;
 
 public abstract class FixedObjectBase extends EntityBase {
 
+    protected BodyDef bdef;
+    protected PolygonShape shape;
+    protected FixtureDef fdef;
+    protected Body body;
+
     //layer defines the object layer
     public FixedObjectBase(int layer){
+
+        this.bdef = new BodyDef();
+        this.shape = new PolygonShape();
+        this.fdef = new FixtureDef();
+
+        createStaticObject();
+
+    }
+
+    public void createStaticObject(){
+        for (MapObject object : GameWorld.getTileMap().getMap().getLayers().get(getName()).getObjects().getByType(RectangleMapObject.class)) {
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            bdef.type = BodyDef.BodyType.StaticBody;
+            bdef.position.set(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.getHeight() / 2);
+
+            body = GameWorld.getTileMap().getWorld().createBody(bdef);
+
+            shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
+            fdef.shape = shape;
+            body.createFixture(fdef);
+        }
     }
 
     @Override
