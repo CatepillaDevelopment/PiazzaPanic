@@ -1,6 +1,7 @@
 package piazzapanic.core;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.math.Rectangle;
@@ -20,6 +21,7 @@ public class GameScreen implements Screen{
     private OrthographicCamera gameCam;
     private Viewport gamePort;
     private GameWorld gameWorld;
+    private Sprite sprite;
     public GameScreen(Main game){
         this.game = game;
         gameCam = new OrthographicCamera();
@@ -61,7 +63,10 @@ public class GameScreen implements Screen{
         box2DDebugRenderer.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
         this.game.batch.begin();
         for (ChefBase chef : this.gameWorld.getCharacters()) {
-            this.game.batch.draw(chef.getTexture(), chef.getXval(), chef.getYval());
+            sprite = new Sprite(chef.getTexture());
+            sprite.setSize(200,200);
+            sprite.setPosition(chef.getXval() - 100, chef.getYval() - 100);
+            sprite.draw(game.batch);
         }
         this.game.batch.end();
     }
