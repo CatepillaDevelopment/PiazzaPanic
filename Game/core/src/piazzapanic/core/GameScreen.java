@@ -22,11 +22,13 @@ public class GameScreen implements Screen{
     private Viewport gamePort;
     private GameWorld gameWorld;
     private Sprite sprite;
+    private GameHUD hud;
     public GameScreen(Main game){
         this.game = game;
         gameCam = new OrthographicCamera();
         gamePort = new FitViewport(this.game.width, this.game.height, gameCam);
         this.box2DDebugRenderer = new Box2DDebugRenderer();
+        this.hud = new GameHUD(this.game.batch);
 
         // Create the world and lock the camera into the middle
         this.gameWorld = new GameWorld();
@@ -44,6 +46,7 @@ public class GameScreen implements Screen{
 
         //update the current chef
         this.gameWorld.getCurrentChef().update();
+        this.hud.update(dt);
 
         // Only render what the gameCam can see
         gameCam.update();
@@ -69,6 +72,10 @@ public class GameScreen implements Screen{
             sprite.draw(game.batch);
         }
         this.game.batch.end();
+
+        // Draw the HUD
+        this.game.batch.setProjectionMatrix(this.hud.stage.getCamera().combined);
+        this.hud.stage.draw();
     }
 
     @Override
