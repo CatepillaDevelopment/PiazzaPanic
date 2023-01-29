@@ -11,13 +11,13 @@ import java.util.List;
 public abstract class ItemBase extends DynamicObjectBase {
     protected boolean ruined;
     protected CharacterBase heldBy;
-    protected FixedObjectBase placedOn;
+    //protected FixedObjectBase placedOn;
     
-    public ItemBase(FixedObjectBase spawnLocation){
+    public ItemBase(/*FixedObjectBase spawnLocation*/){
         super();
         this.ruined = false;
         this.heldBy = null;
-        this.placedOn = spawnLocation;
+        //this.placedOn = spawnLocation;
     }
 
     public boolean isRuined(){
@@ -45,7 +45,7 @@ public abstract class ItemBase extends DynamicObjectBase {
     public void setHolder(CharacterBase character){
         this.heldBy = character;
     }
-
+/*
     public boolean isPlaced(){
         return (this.placedOn != null);
     }
@@ -57,7 +57,7 @@ public abstract class ItemBase extends DynamicObjectBase {
     public void setPlacedOn(PreperationStationBase workstation){
         this.placedOn = workstation;
     }
-
+*/
     @Override
     protected List<FixtureDef> getFixtureDefs() {
         return null;

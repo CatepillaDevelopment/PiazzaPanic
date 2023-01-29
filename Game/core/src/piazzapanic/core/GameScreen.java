@@ -13,7 +13,10 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import piazzapanic.entities.chefs.ChefAlex;
+import piazzapanic.entities.foods.ingredients.Tomato;
 import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
+import piazzapanic.entitiysystem.dynamic.items.ItemBase;
+import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.world.GameWorld;
 
 public class GameScreen implements Screen{
@@ -68,12 +71,7 @@ public class GameScreen implements Screen{
         box2DDebugRenderer.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
         // Render chefs
         this.game.batch.begin();
-        for (ChefBase chef : this.gameWorld.getCharacters()) {
-            sprite = new Sprite(chef.getTexture());
-            sprite.setSize(200,200);
-            sprite.setPosition(chef.getXval() - 100, chef.getYval() - 100);
-            sprite.draw(game.batch);
-        }
+        this.chefRender();
         this.game.batch.end();
         // Switch chef
         if (Gdx.input.isKeyJustPressed(Input.Keys.E)) {
@@ -83,6 +81,27 @@ public class GameScreen implements Screen{
         // Draw the HUD
         this.game.batch.setProjectionMatrix(this.hud.stage.getCamera().combined);
         this.hud.stage.draw();
+        // Pick up tomato place holder
+        if (Gdx.input.isKeyJustPressed(Input.Keys.T)) {
+            gameWorld.getCurrentChef().pickUp(new Tomato());
+        }
+    }
+
+    public void chefRender() {
+        for (ChefBase chef : this.gameWorld.getCharacters()) {
+            sprite = new Sprite(chef.getTexture());
+            sprite.setSize(200,200);
+            sprite.setPosition(chef.getXval() - 100, chef.getYval() - 100);
+            sprite.draw(game.batch);
+            int xOfIngredient = chef.getXval() - 100;
+            for (ItemBase item : chef.getHolding()) {
+                sprite = new Sprite(item.getTexture());
+                sprite.setSize(50,50);
+                sprite.setPosition(xOfIngredient, chef.getYval() + 120);
+                sprite.draw(game.batch);
+                xOfIngredient += 50;
+            }
+        }
     }
 
     @Override

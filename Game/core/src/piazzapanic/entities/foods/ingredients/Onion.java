@@ -10,8 +10,8 @@ public class Onion extends IngredientBase{
         return "Onion";
     }
 
-    public Onion(FixedObjectBase spawnLocation) {
-        super(spawnLocation);
+    public Onion(/*FixedObjectBase spawnLocation*/) {
+//        super(spawnLocation);
     }
 
     @Override

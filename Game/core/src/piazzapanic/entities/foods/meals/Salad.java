@@ -16,8 +16,8 @@ public class Salad extends MealBase {
         return "Salad";
     }
 
-    public Salad(PreperationStationBase spawnLocation) {
-        super(spawnLocation);
+    public Salad(/*PreperationStationBase spawnLocation*/) {
+//        super(spawnLocation);
         //TODO Auto-generated constructor stub
     }
 
@@ -29,9 +29,9 @@ public class Salad extends MealBase {
     @Override
     public Stack<IngredientBase> getRecipe() {
         //define the ingredients and empty recipe
-        Lettuce lettuce = new Lettuce(null);
-        Onion onion = new Onion(null);
-        Tomato tomato = new Tomato(null);
+        Lettuce lettuce = new Lettuce();
+        Onion onion = new Onion();
+        Tomato tomato = new Tomato();
         Stack<IngredientBase> recipe = new Stack<>();
 
         //now the recipe steps

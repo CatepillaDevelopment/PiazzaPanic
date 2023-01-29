@@ -9,8 +9,8 @@ public class Patty extends IngredientBase{
         return "Patty";
     }
 
-    public Patty(FixedObjectBase spawnLocation) {
-        super(spawnLocation);
+    public Patty(/*FixedObjectBase spawnLocation*/) {
+//        super(spawnLocation);
     }
 
     @Override

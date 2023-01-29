@@ -12,8 +12,8 @@ public class Lettuce extends IngredientBase {
         return "Lettuce";
     }
 
-    public Lettuce(FixedObjectBase spawnLocation) {
-        super(spawnLocation);
+    public Lettuce(/*FixedObjectBase spawnLocation*/) {
+//        super(spawnLocation);
     }
 
     @Override
