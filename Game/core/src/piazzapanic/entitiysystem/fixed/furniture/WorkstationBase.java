@@ -15,4 +15,7 @@ public abstract class WorkstationBase extends FixedObjectBase {
     public WorkstationBase(int layer){
         super(layer);
     }
+    public void onHit(){
+        System.out.println("hit");
+    }
 }

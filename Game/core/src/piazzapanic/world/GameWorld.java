@@ -23,6 +23,7 @@ public class GameWorld {
     private List<WorkstationBase> workstations;
     private List<IngredientStationBase> ingredientStations;
     private List<ChefBase> chefs;
+    private Counter counter;
     private ChefBase currentChef;
 
     public GameWorld() {
@@ -44,7 +45,7 @@ public class GameWorld {
         ingredientStations.add(new TomatoStation(0));
 
         new Wall(0);
-        new Counter(0);
+        this.counter = new Counter(0);
 
 
         // Create chefs (index 0 = Alex, index 1 = Steve)

@@ -4,6 +4,7 @@ import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
 import piazzapanic.world.GameWorld;
@@ -12,6 +13,8 @@ public class OnionStation extends IngredientStationBase{
 
     public OnionStation(int layer) {
         super(layer);
+        for(Fixture fixture : fixtures)
+            fixture.setUserData(this);
     }
 
 
@@ -19,6 +22,11 @@ public class OnionStation extends IngredientStationBase{
     public IngredientBase getIngredientType() {
         return null;
         //return new Onion(this);
+    }
+
+    @Override
+    public void onHit(){
+        System.out.println("onionstation hit");
     }
 
     @Override

@@ -2,6 +2,7 @@ package piazzapanic.world;
 
 import com.badlogic.gdx.physics.box2d.*;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
+import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
 
 public class WorldContactListener implements ContactListener {
@@ -9,7 +10,6 @@ public class WorldContactListener implements ContactListener {
     public void beginContact(Contact contact) {
         Fixture fixA = contact.getFixtureA();
         Fixture fixB = contact.getFixtureB();
-        System.out.println("HU");
 
         if(fixA.getUserData() == "chef" || fixB.getUserData() == "chef"){
             Fixture chef = fixA.getUserData() == "chef" ? fixA : fixB;
@@ -17,6 +17,10 @@ public class WorldContactListener implements ContactListener {
 
             if(object.getUserData() != null  && PreperationStationBase.class.isAssignableFrom(object.getUserData().getClass())){
                 ((PreperationStationBase) object.getUserData()).onHit();
+            }
+
+            else if(object.getUserData() != null  && IngredientStationBase.class.isAssignableFrom(object.getUserData().getClass())){
+                ((IngredientStationBase) object.getUserData()).onHit();
             }
         }
     }
