@@ -14,21 +14,6 @@ public class OnionStation extends IngredientStationBase{
         super(layer);
     }
 
-    @Override
-    public void createStaticObject() {
-        for (MapObject object : GameWorld.getTileMap().getMap().getLayers().get(this.getName()).getObjects().getByType(RectangleMapObject.class)) {
-            Rectangle rect = ((RectangleMapObject) object).getRectangle();
-
-            bdef.type = BodyDef.BodyType.StaticBody;
-            bdef.position.set(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.getHeight() / 2);
-
-            body = GameWorld.getTileMap().getWorld().createBody(bdef);
-
-            shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
-            fdef.shape = shape;
-            body.createFixture(fdef);
-        }
-    }
 
     @Override
     public IngredientBase getIngredientType() {
