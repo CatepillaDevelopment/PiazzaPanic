@@ -42,6 +42,7 @@ public abstract class ChefBase extends CharacterBase {
     protected PolygonShape shape;
     protected FixtureDef fdef;
     protected Body body;
+    protected List<Fixture> fixtures;
 
     public ChefBase(int x, int y) {
         createDynamicObject(x, y);
@@ -50,9 +51,10 @@ public abstract class ChefBase extends CharacterBase {
     }
 
     public void createDynamicObject(int x, int y){
-        bdef = new BodyDef();
-        shape = new PolygonShape();
-        fdef = new FixtureDef();
+        this.bdef = new BodyDef();
+        this.shape = new PolygonShape();
+        this.fdef = new FixtureDef();
+        this.fixtures = new ArrayList<>();
 
 
         //create chef objects
@@ -63,8 +65,8 @@ public abstract class ChefBase extends CharacterBase {
 
         shape.setAsBox(getW() / 2, getH() / 2);
         fdef.shape = shape;
-        body.createFixture(fdef).setUserData("chef");
-
+        body.createFixture(fdef).setUserData(this);
+        fixtures.add(body.createFixture(fdef));
 }
 
     @Override
