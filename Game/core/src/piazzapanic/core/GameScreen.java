@@ -78,6 +78,13 @@ public class GameScreen implements Screen{
             gameWorld.getCurrentChef().getBody().setLinearVelocity(0,0);
             gameWorld.setCurrentChef(gameWorld.getCurrentChef() == gameWorld.getCharacters().get(1) ? 0 : 1);
         }
+        // Make sure the chefs can't collide with eachother
+        for(ChefBase chef : gameWorld.getCharacters()){
+            if(chef.equals(gameWorld.getCurrentChef())){
+                chef.getBody().setType(BodyDef.BodyType.DynamicBody);
+            }
+            else chef.getBody().setType(BodyDef.BodyType.StaticBody);
+        }
         // Draw the HUD
         this.game.batch.setProjectionMatrix(this.hud.stage.getCamera().combined);
         this.hud.stage.draw();
