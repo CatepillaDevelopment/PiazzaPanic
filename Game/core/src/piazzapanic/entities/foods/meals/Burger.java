@@ -40,8 +40,8 @@ public class Burger extends MealBase {
         patty.chop();
         patty.grill();
         recipe.add(patty);
-        bun.chop();
-        bun.toast();
+        bun2.chop();
+        bun2.toast();
         recipe.add(bun2);
 
         return recipe;
