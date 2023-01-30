@@ -4,8 +4,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.physics.box2d.*;
 import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
+import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.world.GameWorld;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public abstract class ChefBase extends CharacterBase {
@@ -14,6 +17,7 @@ public abstract class ChefBase extends CharacterBase {
     protected int w = 200, h = 200;
     protected int xval, yval;
 
+    private List<IngredientBase> holding;
 
     public int getW() {
         return w;
@@ -41,6 +45,7 @@ public abstract class ChefBase extends CharacterBase {
 
     public ChefBase(int x, int y) {
         createDynamicObject(x, y);
+        this.holding = new ArrayList <IngredientBase>();
         System.out.println(this.getXval());
     }
 
@@ -96,6 +101,18 @@ public abstract class ChefBase extends CharacterBase {
         this.body.setLinearVelocity(velX * this.speed, velY * this.speed);
         this.xval = (int) this.body.getPosition().x;
         this.yval = (int) this.body.getPosition().y;
+    }
+
+    public void pickUp(IngredientBase food) {
+        if (!isHolding(food)) {
+            this.holding.add(food);
+        }
+    }
+
+    public List<IngredientBase> getHolding() { return holding; }
+
+    public boolean isHolding(IngredientBase food) {
+        return this.holding.contains(food);
     }
 
 }

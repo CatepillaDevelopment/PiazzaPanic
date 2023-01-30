@@ -13,8 +13,8 @@ public abstract class MealBase extends ItemBase {
     protected Stack<IngredientBase> stepsLeftToComplete;
     protected List<IngredientBase> contents;
 
-    public MealBase(FixedObjectBase spawnLocation) {
-        super(spawnLocation);
+    public MealBase(/*FixedObjectBase spawnLocation*/) {
+//        super(spawnLocation);
         this.contents = null;
         this.stepsLeftToComplete = this.getRecipe();
     }
@@ -33,7 +33,7 @@ public abstract class MealBase extends ItemBase {
             return false;
         }
         ingredient.setHolder(null);
-        ingredient.setPlacedOn(null);
+//        ingredient.setPlacedOn(null);
         ingredient.setInMeal(this);
 
         this.contents.add(ingredient);

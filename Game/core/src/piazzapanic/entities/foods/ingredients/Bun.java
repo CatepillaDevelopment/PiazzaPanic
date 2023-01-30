@@ -12,8 +12,8 @@ public class Bun extends IngredientBase {
         return "Bun";
     }
 
-    public Bun(FixedObjectBase spawnLocation) {
-        super(spawnLocation);
+    public Bun(/*FixedObjectBase spawnLocation*/) {
+        //super(spawnLocation);
     }
 
     @Override

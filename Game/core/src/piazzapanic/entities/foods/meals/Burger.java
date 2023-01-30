@@ -15,8 +15,8 @@ public class Burger extends MealBase {
         return "Burger";
     }
 
-    public Burger(PreperationStationBase spawnLocation) {
-        super(spawnLocation);
+    public Burger(/*PreperationStationBase spawnLocation*/) {
+//        super(spawnLocation);
         //TODO Auto-generated constructor stub
     }
 
@@ -28,9 +28,9 @@ public class Burger extends MealBase {
     @Override
     public Stack<IngredientBase> getRecipe() {
         //define the ingredients and empty recipe
-        Bun bun = new Bun(null);
-        Patty patty = new Patty(null);
-        Bun bun2 = new Bun(null);
+        Bun bun = new Bun();
+        Patty patty = new Patty();
+        Bun bun2 = new Bun();
         Stack<IngredientBase> recipe = new Stack<>();
 
         //now the recipe steps
@@ -40,8 +40,8 @@ public class Burger extends MealBase {
         patty.chop();
         patty.grill();
         recipe.add(patty);
-        bun.chop();
-        bun.toast();
+        bun2.chop();
+        bun2.toast();
         recipe.add(bun2);
 
         return recipe;
