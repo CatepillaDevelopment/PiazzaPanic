@@ -14,7 +14,7 @@ import java.util.List;
 public abstract class ChefBase extends CharacterBase {
 
     protected float speed = 500f;
-    protected int w = 200, h = 200;
+    protected int w = 180, h = 200;
     protected int xval, yval;
 
     private List<IngredientBase> holding;

@@ -4,6 +4,7 @@ import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
 import piazzapanic.world.GameWorld;
@@ -12,22 +13,13 @@ public class LettuceStation extends IngredientStationBase{
 
     public LettuceStation(int layer) {
         super(layer);
+        for(Fixture fixture : fixtures)
+            fixture.setUserData(this);
     }
 
     @Override
-    public void createStaticObject() {
-        for (MapObject object : GameWorld.getTileMap().getMap().getLayers().get(this.getName()).getObjects().getByType(RectangleMapObject.class)) {
-            Rectangle rect = ((RectangleMapObject) object).getRectangle();
-
-            bdef.type = BodyDef.BodyType.StaticBody;
-            bdef.position.set(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.getHeight() / 2);
-
-            body = GameWorld.getTileMap().getWorld().createBody(bdef);
-
-            shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
-            fdef.shape = shape;
-            body.createFixture(fdef);
-        }
+    public void onHit(){
+        System.out.println("lettucestation hit");
     }
 
     @Override

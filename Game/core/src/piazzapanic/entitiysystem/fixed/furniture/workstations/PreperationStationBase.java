@@ -54,7 +54,5 @@ public abstract class PreperationStationBase extends WorkstationBase {
         return contents.keySet();
     }
 
-    public void onHit(){
-        System.out.println("hit");
-    }
+
 }

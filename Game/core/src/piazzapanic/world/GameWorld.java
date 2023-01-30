@@ -1,12 +1,18 @@
 package piazzapanic.world;
 import piazzapanic.entities.chefs.ChefAlex;
 import piazzapanic.entities.chefs.ChefSteve;
+import piazzapanic.entities.foods.ingredients.Bun;
+import piazzapanic.entities.furniture.Counter;
+import piazzapanic.entities.furniture.Wall;
+import piazzapanic.entities.stations.ingredientstations.*;
 import piazzapanic.entities.stations.workstations.CuttingStation;
 import piazzapanic.entities.stations.workstations.Fryer;
 import piazzapanic.entities.stations.workstations.Grill;
 import piazzapanic.entities.stations.workstations.Toaster;
 import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
+import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
+import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +21,9 @@ import java.util.List;
 public class GameWorld {
     private static TileMap tileMap;
     private List<WorkstationBase> workstations;
+    private List<IngredientStationBase> ingredientStations;
     private List<ChefBase> chefs;
+    private Counter counter;
     private ChefBase currentChef;
 
     public GameWorld() {
@@ -23,20 +31,22 @@ public class GameWorld {
         this.chefs = new ArrayList<>();
         this.currentChef = null;
         this.tileMap =  new TileMap();
+        this.ingredientStations = new ArrayList<>();
 
         // layer not necessary anymore
         workstations.add(new CuttingStation(0));
         workstations.add(new Fryer(0));
         workstations.add(new Grill(0));
-        /*
-        new CuttingStation(4);
-        new Grill(2);
-        new Fryer(3);
-        // Actually counter
-        new Toaster(6);
-        // Actually wall
-        new Toaster(5);
-         */
+
+        ingredientStations.add(new BunStation(0));
+        ingredientStations.add(new LettuceStation(0));
+        ingredientStations.add(new OnionStation(0));
+        ingredientStations.add(new PattyStation(0));
+        ingredientStations.add(new TomatoStation(0));
+
+        new Wall(0);
+        this.counter = new Counter(0);
+
 
         // Create chefs (index 0 = Alex, index 1 = Steve)
         this.chefs.add(new ChefAlex());
