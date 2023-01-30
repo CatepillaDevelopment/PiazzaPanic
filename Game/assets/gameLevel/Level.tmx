@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="8" height="6" tilewidth="200" tileheight="200" infinite="0" nextlayerid="18" nextobjectid="38">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="8" height="6" tilewidth="200" tileheight="200" infinite="0" nextlayerid="18" nextobjectid="41">
  <tileset firstgid="1" source="KitchenTiles.tsx"/>
  <tileset firstgid="3" source="wallPaper.tsx"/>
  <tileset firstgid="4" source="counter.tsx"/>
  <tileset firstgid="8" source="stations.tsx"/>
  <tileset firstgid="12" source="IngredientStations.tsx"/>
- <tileset firstgid="18" source="IngredientStations.tsx"/>
  <layer id="2" name="Floor" width="8" height="6">
   <data encoding="csv">
 3,3,3,3,3,3,3,3,
@@ -23,31 +22,33 @@
 0,0,0,0,0,0,4,0,
 0,0,0,0,0,0,4,0,
 0,0,0,0,0,0,4,0,
-0,23,22,21,20,19,18,0
+0,17,16,15,14,13,12,0
 </data>
  </layer>
  <objectgroup id="5" name="wall">
-  <object id="3" x="0" y="0" width="1600" height="100"/>
+  <object id="3" x="0" y="219" width="1600" height="1"/>
   <object id="11" x="0" y="200" height="1000"/>
   <object id="12" x="0" y="1200" width="1600"/>
+  <object id="38" x="0" y="200" height="1000"/>
+  <object id="39" x="0" y="1200" width="1200"/>
  </objectgroup>
  <objectgroup id="3" name="counter">
   <object id="2" x="1218.19" y="196.219" width="182.592" height="997.445"/>
  </objectgroup>
  <objectgroup id="14" name="chefs">
-  <object id="29" name="Alex" x="400" y="600" width="200" height="200"/>
-  <object id="30" name="Steve" x="800" y="600" width="200" height="200"/>
+  <object id="29" name="Alex" x="410" y="600" width="180" height="200"/>
+  <object id="30" name="Steve" x="810" y="600" width="180" height="200"/>
  </objectgroup>
  <objectgroup id="15" name="baking">
-  <object id="31" x="0" y="150" width="200"/>
-  <object id="32" x="600" y="150" width="200"/>
+  <object id="31" x="100" y="220" width="1"/>
+  <object id="32" x="700" y="220" width="1"/>
  </objectgroup>
  <objectgroup id="16" name="frying">
-  <object id="33" x="200" y="150" width="200"/>
-  <object id="35" x="800" y="150" width="200"/>
+  <object id="33" x="300" y="220" width="1"/>
+  <object id="35" x="900" y="220" width="1"/>
  </objectgroup>
  <objectgroup id="17" name="chopping">
-  <object id="36" x="400" y="150" width="200"/>
-  <object id="37" x="1000" y="150" width="200"/>
+  <object id="36" x="500" y="220" width="1"/>
+  <object id="37" x="1100" y="220" width="1"/>
  </objectgroup>
 </map>
