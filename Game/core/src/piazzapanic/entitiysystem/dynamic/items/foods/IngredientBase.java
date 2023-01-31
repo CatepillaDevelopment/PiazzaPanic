@@ -11,6 +11,7 @@ public abstract class IngredientBase extends ItemBase {
     protected boolean grilled;
     protected boolean toasted;
     protected MealBase inMeal;
+    public abstract void updateTexture();
 
     public IngredientBase(/*FixedObjectBase spawnLocation*/) {
         //super(spawnLocation);

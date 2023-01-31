@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
@@ -54,5 +55,10 @@ public abstract class PreperationStationBase extends WorkstationBase {
         return contents.keySet();
     }
 
+    public void onHit(ChefBase chef) {
+        for (ItemBase food : chef.getHolding()) {
+            this.processItem(food);
+        }
+    }
 
 }

@@ -47,4 +47,9 @@ public class Bun extends IngredientBase {
 
     public Texture getTexture() { return this.texture; }
 
+    @Override
+    public void updateTexture() {
+        this.texture = new Texture(Gdx.files.internal("food/baked bun.png"));
+    }
+
 }

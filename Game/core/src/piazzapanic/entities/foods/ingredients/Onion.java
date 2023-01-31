@@ -49,4 +49,8 @@ public class Onion extends IngredientBase{
     public Texture getTexture() {
         return this.texture;
     }
+
+    public void updateTexture() {
+        texture = new Texture(Gdx.files.internal("food/sliced onion.png"));
+    }
 }

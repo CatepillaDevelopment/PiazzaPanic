@@ -46,4 +46,10 @@ public class Patty extends IngredientBase{
     public Texture getTexture() {
         return this.texture;
     }
+
+    @Override
+    public void updateTexture() {
+        this.texture = new Texture(Gdx.files.internal("food/cooked patty.png"));
+
+    }
 }

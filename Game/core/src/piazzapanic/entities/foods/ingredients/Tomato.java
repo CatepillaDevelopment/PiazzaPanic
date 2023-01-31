@@ -43,4 +43,9 @@ public class Tomato extends IngredientBase{
     }
 
     public Texture getTexture() { return texture; }
+
+    @Override
+    public void updateTexture() {
+        this.texture = new Texture(Gdx.files.internal("food/sliced tomato.png"));        
+    }
 }

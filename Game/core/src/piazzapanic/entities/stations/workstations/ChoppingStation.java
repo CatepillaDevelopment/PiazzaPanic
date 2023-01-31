@@ -55,7 +55,11 @@ public class ChoppingStation extends PreperationStationBase {
 
     @Override
     public void onHit(ChefBase chef) {
-        System.out.println("cutting station hit");
+        for (IngredientBase food : chef.getHolding()) {
+            this.processItem(food);
+            System.out.println("CHOP!");
+            food.updateTexture();
+        }
     }
 
 }
