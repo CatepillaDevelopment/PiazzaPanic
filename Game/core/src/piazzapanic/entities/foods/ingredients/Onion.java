@@ -18,7 +18,7 @@ public class Onion extends IngredientBase{
 
     public Onion(/*FixedObjectBase spawnLocation*/) {
 //        super(spawnLocation);
-    texture = new Texture(Gdx.files.internal("food/tomato.png"));
+    texture = new Texture(Gdx.files.internal("food/onion.png"));
     }
 
     @Override
