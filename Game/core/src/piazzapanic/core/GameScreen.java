@@ -15,7 +15,6 @@ import piazzapanic.world.GameWorld;
 public class GameScreen implements Screen{
 
     final Main game;
-    private Box2DDebugRenderer box2DDebugRenderer;
     private OrthographicCamera gameCam;
     private Viewport gamePort;
     private GameWorld gameWorld;
@@ -30,7 +29,6 @@ public class GameScreen implements Screen{
         this.game = game;
         gameCam = new OrthographicCamera();
         gamePort = new FitViewport(this.game.width, this.game.height, gameCam);
-        this.box2DDebugRenderer = new Box2DDebugRenderer();
         this.hud = new GameHUD(this.game.batch);
 
         // Create the world and lock the camera into the middle
