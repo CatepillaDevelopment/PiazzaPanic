@@ -8,11 +8,6 @@ public class Counter extends CounterBase {
     }
 
     @Override
-    public String getTextureFilePath() {
-        return null;
-    }
-
-    @Override
     public String getName() {
         return "counter";
     }

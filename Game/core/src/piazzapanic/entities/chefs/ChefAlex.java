@@ -35,11 +35,6 @@ public class ChefAlex extends ChefBase{
         return "Alex";
     }
 
-    @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/ChefAlex.png";
-    }
-
     public Texture getTexture() { return this.texture; }
 
 }

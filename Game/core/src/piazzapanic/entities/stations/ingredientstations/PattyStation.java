@@ -33,11 +33,6 @@ public class PattyStation extends IngredientStationBase{
     }
 
     @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/stations/ingredientstations/data/PattyStation.png";
-    }
-
-    @Override
     public String getName() {
         return "Patty Station";
     }

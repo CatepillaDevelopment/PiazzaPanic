@@ -27,11 +27,6 @@ public class Fryer extends PreperationStationBase {
     }
 
     @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/stations/workstations/data/Fryer.png";
-    }
-
-    @Override
     public boolean processItem(ItemBase item) {
         if (item instanceof IngredientBase){
             IngredientBase ingredient = (IngredientBase) item;

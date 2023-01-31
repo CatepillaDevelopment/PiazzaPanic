@@ -33,11 +33,6 @@ public class TomatoStation extends IngredientStationBase{
     }
 
     @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/stations/ingredientstations/data/TomatoStation.png";
-    }
-
-    @Override
     public String getName() {
         return "Tomato Station";
     }

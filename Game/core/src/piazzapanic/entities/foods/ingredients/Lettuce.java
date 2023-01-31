@@ -21,11 +21,6 @@ public class Lettuce extends IngredientBase {
     }
 
     @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Lettuce.png";
-    }
-
-    @Override
     public boolean canBeChopped() {
         return true;
     }

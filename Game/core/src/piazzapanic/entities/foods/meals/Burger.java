@@ -21,11 +21,6 @@ public class Burger extends MealBase {
     }
 
     @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Burger.png";
-    }
-
-    @Override
     public Stack<IngredientBase> getRecipe() {
         //define the ingredients and empty recipe
         Bun bun = new Bun();

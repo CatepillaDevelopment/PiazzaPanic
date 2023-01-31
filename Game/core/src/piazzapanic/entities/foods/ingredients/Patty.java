@@ -19,11 +19,6 @@ public class Patty extends IngredientBase{
     }
 
     @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Patty.png";
-    }
-
-    @Override
     public boolean canBeChopped() {
         return true;
     }

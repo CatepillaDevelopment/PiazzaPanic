@@ -33,11 +33,6 @@ public class OnionStation extends IngredientStationBase{
     }
 
     @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/stations/ingredientstations/data/OnionStation.png";
-    }
-
-    @Override
     public String getName() {
         return "Onion Station";
     }

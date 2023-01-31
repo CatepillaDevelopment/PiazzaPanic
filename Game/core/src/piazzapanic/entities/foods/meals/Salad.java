@@ -22,11 +22,6 @@ public class Salad extends MealBase {
     }
 
     @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Salad.png";
-    }
-
-    @Override
     public Stack<IngredientBase> getRecipe() {
         //define the ingredients and empty recipe
         Lettuce lettuce = new Lettuce();

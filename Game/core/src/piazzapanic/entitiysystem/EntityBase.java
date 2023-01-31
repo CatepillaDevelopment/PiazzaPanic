@@ -11,8 +11,6 @@ import java.util.List;
 
 public abstract class EntityBase extends Sprite {
     protected String name;
-
-    public abstract String getTextureFilePath();
     public abstract String getName();
 
     protected abstract BodyDef getBodyDef();
@@ -25,16 +23,6 @@ public abstract class EntityBase extends Sprite {
 
     public EntityBase(){
 
-    }
-
-    public File getTextureFile() throws FileNotFoundException{
-        String textureFilePath = this.getTextureFilePath();
-        File textureFile = new File(textureFilePath);
-        if (textureFile.exists()){
-            return textureFile;
-        } else{
-            throw new FileNotFoundException(textureFilePath);
-        }
     }
 
     public void setName(String name) {

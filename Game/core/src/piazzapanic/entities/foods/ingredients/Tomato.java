@@ -18,11 +18,6 @@ public class Tomato extends IngredientBase{
     }
 
     @Override
-    public String getTextureFilePath() {
-        return "src/piazzapanic/entities/workstations/data/Tomato.png";
-    }
-
-    @Override
     public boolean canBeChopped() {
         return true;
     }
