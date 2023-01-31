@@ -14,7 +14,7 @@ import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import piazzapanic.entities.chefs.ChefAlex;
 import piazzapanic.entities.foods.ingredients.Tomato;
-import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
+import piazzapanic.entitiysystem.dynamic.characters.ChefBase;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.world.GameWorld;
