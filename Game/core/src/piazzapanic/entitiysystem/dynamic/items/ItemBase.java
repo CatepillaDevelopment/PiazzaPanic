@@ -2,7 +2,7 @@ package piazzapanic.entitiysystem.dynamic.items;
 
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import piazzapanic.entitiysystem.dynamic.DynamicObjectBase;
-import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
+import piazzapanic.entitiysystem.dynamic.characters.ChefBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
 
@@ -10,7 +10,7 @@ import java.util.List;
 
 public abstract class ItemBase extends DynamicObjectBase {
     protected boolean ruined;
-    protected CharacterBase heldBy;
+    protected ChefBase heldBy;
     //protected FixedObjectBase placedOn;
     
     public ItemBase(/*FixedObjectBase spawnLocation*/){
@@ -38,12 +38,12 @@ public abstract class ItemBase extends DynamicObjectBase {
         return (this.heldBy != null);
     }
 
-    public CharacterBase getHolder(){
+    public ChefBase getHolder(){
         return this.heldBy;
     }
 
-    public void setHolder(CharacterBase character){
-        this.heldBy = character;
+    public void setHolder(ChefBase Chef){
+        this.heldBy = Chef;
     }
 /*
     public boolean isPlaced(){
