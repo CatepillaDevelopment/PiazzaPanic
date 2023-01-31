@@ -24,7 +24,7 @@ public class Grill extends PreperationStationBase {
 
     @Override
     public String getName() {
-        return "baking";
+        return "Grill";
     }
 
     @Override

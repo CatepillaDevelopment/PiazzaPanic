@@ -9,12 +9,11 @@ import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
-import piazzapanic.world.GameWorld;
 import com.badlogic.gdx.physics.box2d.*;
 
-public class CuttingStation extends PreperationStationBase {
+public class ChoppingStation extends PreperationStationBase {
 
-    public CuttingStation(int layer) {
+    public ChoppingStation(int layer) {
         super(layer);
         for(Fixture fixture : fixtures)
             fixture.setUserData(this);
@@ -24,7 +23,7 @@ public class CuttingStation extends PreperationStationBase {
 
     @Override
     public String getName() {
-        return "chopping";
+        return "Chopping Station";
     }
 
     @Override

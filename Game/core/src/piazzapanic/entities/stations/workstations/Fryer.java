@@ -23,7 +23,7 @@ public class Fryer extends PreperationStationBase {
 
     @Override
     public String getName() {
-        return "frying";
+        return "Fryer";
     }
 
     @Override

@@ -28,6 +28,11 @@ public class GameScreen implements Screen{
     private GameWorld gameWorld;
     private Sprite sprite;
     private GameHUD hud;
+
+    public GameHUD getGameHud(){
+        return this.hud;
+    }
+
     public GameScreen(Main game){
         this.game = game;
         gameCam = new OrthographicCamera();
