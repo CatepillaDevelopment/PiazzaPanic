@@ -1,7 +1,6 @@
 package piazzapanic.world;
 import piazzapanic.entities.chefs.ChefAlex;
 import piazzapanic.entities.chefs.ChefSteve;
-import piazzapanic.entities.furniture.Counter;
 import piazzapanic.entities.furniture.Wall;
 import piazzapanic.entities.stations.ingredientstations.*;
 import piazzapanic.entities.stations.workstations.ChoppingStation;
@@ -20,7 +19,6 @@ public class GameWorld {
     private List<WorkstationBase> workstations;
     private List<IngredientStationBase> ingredientStations;
     private List<ChefBase> chefs;
-    private Counter counter;
     private ChefBase currentChef;
 
     public GameWorld() {
@@ -41,7 +39,6 @@ public class GameWorld {
         ingredientStations.add(new TomatoStation(0));
 
         new Wall(0);
-        this.counter = new Counter(0);
 
 
         // Create chefs (index 0 = Alex, index 1 = Steve)
