@@ -3,6 +3,7 @@ package piazzapanic.entities.chefs;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 
@@ -22,6 +23,9 @@ public class ChefSteve extends ChefBase{
 
     public ChefSteve() {
         super(800, 600);
+        for (Fixture fixture : this.fixtures) {
+            fixture.setUserData(this);
+        }
         this.xval = 800;
         this.yval = 600;
         this.texture = new Texture(Gdx.files.internal("chefs/Steve.png"));

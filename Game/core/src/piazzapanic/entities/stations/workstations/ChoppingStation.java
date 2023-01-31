@@ -1,5 +1,11 @@
 package piazzapanic.entities.stations.workstations;
 
+import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.maps.objects.RectangleMapObject;
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.physics.box2d.BodyDef;
+
+import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
@@ -48,7 +54,7 @@ public class ChoppingStation extends PreperationStationBase {
     }
 
     @Override
-    public void onHit() {
+    public void onHit(ChefBase chef) {
         System.out.println("cutting station hit");
     }
 

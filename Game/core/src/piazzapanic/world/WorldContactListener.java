@@ -1,6 +1,8 @@
 package piazzapanic.world;
 
 import com.badlogic.gdx.physics.box2d.*;
+
+import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 import piazzapanic.core.GameHUD;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
@@ -13,13 +15,13 @@ public class WorldContactListener implements ContactListener {
         Fixture fixA = contact.getFixtureA();
         Fixture fixB = contact.getFixtureB();
 
-        if(fixA.getUserData() == "chef" || fixB.getUserData() == "chef"){
-            Fixture chef = fixA.getUserData() == "chef" ? fixA : fixB;
+        if(fixA.getUserData() instanceof ChefBase || fixB.getUserData() instanceof ChefBase){
+            Fixture chef = (fixA.getUserData() instanceof ChefBase) ? fixA : fixB;
             Fixture object = chef == fixA ? fixB : fixA;
 
             if(object.getUserData() != null  && WorkstationBase.class.isAssignableFrom(object.getUserData().getClass())){
                 WorkstationBase workstation = (WorkstationBase) object.getUserData();
-                workstation.onHit();
+                workstation.onHit((ChefBase) chef.getUserData());
                 GameHUD.setTouching(workstation.getName());
             }
         }

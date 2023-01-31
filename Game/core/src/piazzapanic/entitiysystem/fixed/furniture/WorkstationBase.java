@@ -1,6 +1,8 @@
 package piazzapanic.entitiysystem.fixed.furniture;
 
 import com.badlogic.gdx.physics.box2d.FixtureDef;
+
+import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
 import java.util.List;
@@ -15,7 +17,7 @@ public abstract class WorkstationBase extends FixedObjectBase {
     public WorkstationBase(int layer){
         super(layer);
     }
-    public void onHit(){
+    public void onHit(ChefBase chef){
         System.out.println("hit");
     }
 }

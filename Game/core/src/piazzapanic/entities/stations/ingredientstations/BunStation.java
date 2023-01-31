@@ -5,6 +5,9 @@ import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Fixture;
+
+import piazzapanic.entities.foods.ingredients.Bun;
+import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
 import piazzapanic.world.GameWorld;
@@ -18,8 +21,9 @@ public class BunStation extends IngredientStationBase{
     }
 
     @Override
-    public void onHit(){
+    public void onHit(ChefBase chef){
         System.out.println("bunstation hit");
+        chef.pickUp(new Bun());
     }
 
     @Override
