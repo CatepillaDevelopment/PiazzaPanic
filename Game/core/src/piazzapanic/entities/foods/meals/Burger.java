@@ -15,9 +15,7 @@ public class Burger extends MealBase {
         return "Burger";
     }
 
-    public Burger(/*PreperationStationBase spawnLocation*/) {
-//        super(spawnLocation);
-        //TODO Auto-generated constructor stub
+    public Burger() {
     }
 
     @Override

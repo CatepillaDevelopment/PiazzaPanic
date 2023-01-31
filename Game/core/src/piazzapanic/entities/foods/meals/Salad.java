@@ -16,9 +16,7 @@ public class Salad extends MealBase {
         return "Salad";
     }
 
-    public Salad(/*PreperationStationBase spawnLocation*/) {
-//        super(spawnLocation);
-        //TODO Auto-generated constructor stub
+    public Salad() {
     }
 
     @Override

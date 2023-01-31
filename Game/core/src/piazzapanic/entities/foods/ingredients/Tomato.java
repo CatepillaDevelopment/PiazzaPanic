@@ -12,8 +12,7 @@ public class Tomato extends IngredientBase{
     }
     private Texture texture;
 
-    public Tomato(/*FixedObjectBase spawnLocation*/) {
-//        super(spawnLocation);
+    public Tomato() {
         texture = new Texture(Gdx.files.internal("food/tomato.png"));
     }
 

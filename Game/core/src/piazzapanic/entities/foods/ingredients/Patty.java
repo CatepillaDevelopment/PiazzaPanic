@@ -13,8 +13,7 @@ public class Patty extends IngredientBase{
         return "Patty";
     }
 
-    public Patty(/*FixedObjectBase spawnLocation*/) {
-//        super(spawnLocation);
+    public Patty() {
     texture = new Texture(Gdx.files.internal("food/raw meat.png"));
     }
 

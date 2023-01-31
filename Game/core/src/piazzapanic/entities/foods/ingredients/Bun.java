@@ -15,8 +15,7 @@ public class Bun extends IngredientBase {
         return "Bun";
     }
 
-    public Bun(/*FixedObjectBase spawnLocation*/) {
-        //super(spawnLocation);
+    public Bun() {
         this.texture = new Texture(Gdx.files.internal("food/bun.png"));
     }
 

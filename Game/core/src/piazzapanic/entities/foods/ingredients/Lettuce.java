@@ -15,8 +15,7 @@ public class Lettuce extends IngredientBase {
         return "Lettuce";
     }
 
-    public Lettuce(/*FixedObjectBase spawnLocation*/) {
-//        super(spawnLocation);
+    public Lettuce() {
         texture = new Texture(Gdx.files.internal("food/lettuce.png"));
     }
 
