@@ -4,10 +4,7 @@ import com.badlogic.gdx.physics.box2d.*;
 
 import piazzapanic.entitiysystem.dynamic.characters.ChefBase;
 import piazzapanic.core.GameHUD;
-import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
-import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
-import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
 
 public class WorldContactListener implements ContactListener {
     @Override

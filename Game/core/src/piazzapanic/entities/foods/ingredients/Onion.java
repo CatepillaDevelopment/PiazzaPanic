@@ -1,12 +1,8 @@
 package piazzapanic.entities.foods.ingredients;
 
-import org.w3c.dom.Text;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
-import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
 public class Onion extends IngredientBase{
     private Texture texture;

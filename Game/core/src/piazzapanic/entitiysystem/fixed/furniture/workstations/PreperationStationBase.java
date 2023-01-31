@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Set;
 
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
-import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
 
 public abstract class PreperationStationBase extends WorkstationBase {

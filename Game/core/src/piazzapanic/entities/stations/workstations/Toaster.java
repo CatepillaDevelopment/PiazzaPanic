@@ -1,16 +1,11 @@
 package piazzapanic.entities.stations.workstations;
 
-import com.badlogic.gdx.maps.MapObject;
-import com.badlogic.gdx.maps.objects.RectangleMapObject;
-import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Fixture;
 
 import piazzapanic.entitiysystem.dynamic.characters.ChefBase;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
-import piazzapanic.world.GameWorld;
 
 public class Toaster extends PreperationStationBase {
 

@@ -1,12 +1,7 @@
 package piazzapanic.entitiysystem;
 
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.physics.box2d.*;
-import piazzapanic.world.GameWorld;
-
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.List;
 
 public abstract class EntityBase extends Sprite {

@@ -4,19 +4,12 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.maps.MapObject;
-import com.badlogic.gdx.maps.objects.RectangleMapObject;
-import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import piazzapanic.entities.chefs.ChefAlex;
-import piazzapanic.entities.foods.ingredients.Tomato;
 import piazzapanic.entitiysystem.dynamic.characters.ChefBase;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
-import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.world.GameWorld;
 
 public class GameScreen implements Screen{

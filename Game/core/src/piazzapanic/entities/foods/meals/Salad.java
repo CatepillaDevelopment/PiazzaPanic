@@ -7,7 +7,6 @@ import piazzapanic.entities.foods.ingredients.Onion;
 import piazzapanic.entities.foods.ingredients.Tomato;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.MealBase;
-import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
 
 public class Salad extends MealBase {
 

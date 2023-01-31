@@ -3,8 +3,6 @@ package piazzapanic.entitiysystem.dynamic.items;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import piazzapanic.entitiysystem.dynamic.DynamicObjectBase;
 import piazzapanic.entitiysystem.dynamic.characters.ChefBase;
-import piazzapanic.entitiysystem.fixed.FixedObjectBase;
-import piazzapanic.entitiysystem.fixed.furniture.workstations.PreperationStationBase;
 
 import java.util.List;
 

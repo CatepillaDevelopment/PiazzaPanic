@@ -1,9 +1,6 @@
 package piazzapanic.entitiysystem.dynamic.items.foods;
 
-import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.items.ItemBase;
-import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 
 public abstract class IngredientBase extends ItemBase {
     protected boolean chopped;
