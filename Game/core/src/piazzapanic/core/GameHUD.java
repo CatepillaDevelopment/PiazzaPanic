@@ -1,5 +1,6 @@
 package piazzapanic.core;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -18,6 +19,11 @@ public class GameHUD {
     private float timer;
     Label timeLabel;
     Label scoreLabel;
+
+    Label touchingLabel;
+    Label touchInfoLabel;
+
+    static String touching = "Nothing";
 
     GameHUD(SpriteBatch sb){
 
@@ -38,14 +44,29 @@ public class GameHUD {
         this.timeLabel.setFontScale(3f);
         this.scoreLabel.setFontScale(3f);
 
+        this.touchingLabel = new Label("TOUCHING", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        this.touchInfoLabel = new Label(String.format(GameHUD.touching), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        this.touchingLabel.setFontScale(3f);
+        this.touchInfoLabel.setFontScale(3f);
+
         // Add the labels to the table
         table.add(this.timeLabel).expandX().padTop(10);
+        table.add(this.touchingLabel).expandX().padTop(10);
         table.row();
         table.add(this.scoreLabel).expandX().padTop(10);
+        table.add(this.touchInfoLabel).expandX().padTop(10);
+
 
         // Add the table to the stage
         this.stage.addActor(table);
+    }
 
+    public static void clearTouching() {
+        GameHUD.touching = "Nothing";
+    }
+
+    public static void setTouching(String name) {
+        GameHUD.touching = name;
     }
 
     public void update(float dt){
@@ -56,6 +77,7 @@ public class GameHUD {
             this.scoreLabel.setText(String.format("%d", this.timeCount));
             this.timer = 0;
         }
+        this.touchInfoLabel.setText(GameHUD.touching);
     }
 
 }

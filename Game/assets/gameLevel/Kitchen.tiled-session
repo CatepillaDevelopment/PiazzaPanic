@@ -8,13 +8,16 @@
         "."
     ],
     "fileStates": {
+        "IngredientStations.tsx": {
+            "scaleInDock": 1
+        },
         "KitchenTiles.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "Level.tmx": {
             "scale": 0.46075,
-            "selectedLayer": 3,
+            "selectedLayer": 12,
             "viewCenter": {
                 "x": 801.9533369506238,
                 "y": 601.1937059142703

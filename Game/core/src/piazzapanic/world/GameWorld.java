@@ -1,16 +1,13 @@
 package piazzapanic.world;
 import piazzapanic.entities.chefs.ChefAlex;
 import piazzapanic.entities.chefs.ChefSteve;
-import piazzapanic.entities.foods.ingredients.Bun;
 import piazzapanic.entities.furniture.Counter;
 import piazzapanic.entities.furniture.Wall;
 import piazzapanic.entities.stations.ingredientstations.*;
-import piazzapanic.entities.stations.workstations.CuttingStation;
+import piazzapanic.entities.stations.workstations.ChoppingStation;
 import piazzapanic.entities.stations.workstations.Fryer;
 import piazzapanic.entities.stations.workstations.Grill;
-import piazzapanic.entities.stations.workstations.Toaster;
 import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
-import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
 
@@ -34,7 +31,7 @@ public class GameWorld {
         this.ingredientStations = new ArrayList<>();
 
         // layer not necessary anymore
-        workstations.add(new CuttingStation(0));
+        workstations.add(new ChoppingStation(0));
         workstations.add(new Fryer(0));
         workstations.add(new Grill(0));
 

@@ -56,15 +56,15 @@
   <object id="29" name="Alex" x="410" y="600" width="180" height="200"/>
   <object id="30" name="Steve" x="810" y="600" width="180" height="200"/>
  </objectgroup>
- <objectgroup id="15" name="baking">
+ <objectgroup id="15" name="Grill">
   <object id="31" x="100" y="220" width="1"/>
   <object id="32" x="700" y="220" width="1"/>
  </objectgroup>
- <objectgroup id="16" name="frying">
+ <objectgroup id="16" name="Fryer">
   <object id="33" x="300" y="220" width="1"/>
   <object id="35" x="900" y="220" width="1"/>
  </objectgroup>
- <objectgroup id="17" name="chopping">
+ <objectgroup id="17" name="Chopping Station">
   <object id="36" x="500" y="220" width="1"/>
   <object id="37" x="1100" y="220" width="1"/>
  </objectgroup>
