@@ -24,7 +24,7 @@ public abstract class FixedObjectBase extends EntityBase {
         this.bdef = new BodyDef();
         this.shape = new PolygonShape();
         this.fdef = new FixtureDef();
-        this.fixtures = new ArrayList();
+        this.fixtures = new ArrayList<Fixture>();
 
         createStaticObject();
     }
