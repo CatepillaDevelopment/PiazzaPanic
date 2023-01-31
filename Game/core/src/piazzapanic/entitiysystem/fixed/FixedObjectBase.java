@@ -27,7 +27,6 @@ public abstract class FixedObjectBase extends EntityBase {
         this.fixtures = new ArrayList();
 
         createStaticObject();
-
     }
 
     public void createStaticObject(){

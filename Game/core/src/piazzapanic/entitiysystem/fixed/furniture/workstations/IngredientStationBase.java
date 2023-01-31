@@ -22,6 +22,7 @@ public abstract class IngredientStationBase extends WorkstationBase {
     }
 
     public void tick(){
+        // Ingredient stations hold 4 of their ingredients at a time
         while(this.contents.size() < 4){
             this.contents.add(this.getIngredientType());
         }

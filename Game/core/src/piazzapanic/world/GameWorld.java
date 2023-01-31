@@ -30,7 +30,6 @@ public class GameWorld {
         this.tileMap =  new TileMap();
         this.ingredientStations = new ArrayList<>();
 
-        // layer not necessary anymore
         workstations.add(new ChoppingStation(0));
         workstations.add(new Fryer(0));
         workstations.add(new Grill(0));
