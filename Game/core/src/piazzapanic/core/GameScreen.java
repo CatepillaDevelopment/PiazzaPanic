@@ -93,10 +93,6 @@ public class GameScreen implements Screen{
         // Draw the HUD
         this.game.batch.setProjectionMatrix(this.hud.stage.getCamera().combined);
         this.hud.stage.draw();
-        // Pick up tomato place holder
-        if (Gdx.input.isKeyJustPressed(Input.Keys.T)) {
-            gameWorld.getCurrentChef().pickUp(new Tomato());
-        }
     }
 
     public void chefRender() {
