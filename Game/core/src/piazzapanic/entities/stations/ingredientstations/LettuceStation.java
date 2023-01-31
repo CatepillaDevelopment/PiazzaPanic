@@ -7,7 +7,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Fixture;
 
 import piazzapanic.entities.foods.ingredients.Lettuce;
-import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
+import piazzapanic.entitiysystem.dynamic.characters.ChefBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
 import piazzapanic.world.GameWorld;

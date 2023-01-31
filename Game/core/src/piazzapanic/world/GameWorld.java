@@ -7,7 +7,7 @@ import piazzapanic.entities.stations.ingredientstations.*;
 import piazzapanic.entities.stations.workstations.ChoppingStation;
 import piazzapanic.entities.stations.workstations.Fryer;
 import piazzapanic.entities.stations.workstations.Grill;
-import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
+import piazzapanic.entitiysystem.dynamic.characters.ChefBase;
 import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
 import piazzapanic.entitiysystem.fixed.furniture.workstations.IngredientStationBase;
 

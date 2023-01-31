@@ -1,16 +1,17 @@
-package piazzapanic.entitiysystem.dynamic.characters.chefs;
+package piazzapanic.entitiysystem.dynamic.characters;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.physics.box2d.*;
-import piazzapanic.entitiysystem.dynamic.characters.CharacterBase;
+
+import piazzapanic.entitiysystem.dynamic.DynamicObjectBase;
 import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.world.GameWorld;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class ChefBase extends CharacterBase {
+public abstract class ChefBase extends DynamicObjectBase {
 
     protected float speed = 500000f;
     protected int w = 180, h = 200;

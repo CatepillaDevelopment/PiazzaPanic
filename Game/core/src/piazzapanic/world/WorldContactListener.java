@@ -2,7 +2,7 @@ package piazzapanic.world;
 
 import com.badlogic.gdx.physics.box2d.*;
 
-import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
+import piazzapanic.entitiysystem.dynamic.characters.ChefBase;
 import piazzapanic.core.GameHUD;
 import piazzapanic.entitiysystem.fixed.FixedObjectBase;
 import piazzapanic.entitiysystem.fixed.furniture.WorkstationBase;
