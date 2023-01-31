@@ -56,7 +56,7 @@ public class Grill extends PreperationStationBase {
 
     @Override
     public void onHit(ChefBase chef) {
-        System.out.println("Baking station hit");
+
     }
 
 }

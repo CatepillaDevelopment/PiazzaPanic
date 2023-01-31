@@ -8,14 +8,13 @@ import piazzapanic.entitiysystem.dynamic.items.foods.IngredientBase;
 import piazzapanic.world.GameWorld;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public abstract class ChefBase extends CharacterBase {
 
-    protected float speed = 500f;
+    protected float speed = 500000f;
     protected int w = 180, h = 200;
-    protected int xval, yval;
+    protected float xval, yval;
 
     private List<IngredientBase> holding;
 
@@ -33,10 +32,10 @@ public abstract class ChefBase extends CharacterBase {
         return body;
     }
 
-    public abstract int getXval();
+    public abstract float getXval();
 
 
-    public abstract int getYval();
+    public abstract float getYval();
 
     protected BodyDef bdef;
     protected PolygonShape shape;
@@ -47,7 +46,6 @@ public abstract class ChefBase extends CharacterBase {
     public ChefBase(int x, int y) {
         createDynamicObject(x, y);
         this.holding = new ArrayList <IngredientBase>();
-        System.out.println(this.getXval());
     }
 
     public void createDynamicObject(int x, int y){
@@ -59,7 +57,7 @@ public abstract class ChefBase extends CharacterBase {
 
         //create chef objects
         bdef.type = BodyDef.BodyType.DynamicBody;
-        bdef.position.set(x + getW() / 2, y + getH() / 2);
+        bdef.position.set((x + getW() / 2), (y + getH() / 2));
 
         body = GameWorld.getTileMap().getWorld().createBody(bdef);
 

@@ -56,7 +56,7 @@ public class Toaster extends PreperationStationBase {
 
     @Override
     public void onHit(ChefBase chef) {
-        System.out.println("Toaster station hit");
+
     }
 
 }

@@ -29,7 +29,6 @@ public class TomatoStation extends IngredientStationBase{
 
     @Override
     public void onHit(ChefBase chef){
-        System.out.println("tomatostation hit");
         chef.pickUp(new Tomato());
     }
 

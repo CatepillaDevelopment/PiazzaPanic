@@ -55,7 +55,7 @@ public class ChoppingStation extends PreperationStationBase {
 
     @Override
     public void onHit(ChefBase chef) {
-        System.out.println("cutting station hit");
+
     }
 
 }

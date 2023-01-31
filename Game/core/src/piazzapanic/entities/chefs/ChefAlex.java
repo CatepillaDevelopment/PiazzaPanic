@@ -1,30 +1,22 @@
 package piazzapanic.entities.chefs;
 
-import javax.imageio.stream.FileCacheImageInputStream;
-
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.maps.MapObject;
-import com.badlogic.gdx.maps.objects.RectangleMapObject;
-import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Fixture;
 
 import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
-import piazzapanic.world.GameWorld;
 
 public class ChefAlex extends ChefBase{
 
     private Texture texture;
 
     @Override
-    public int getXval() {
+    public float getXval() {
         return this.xval;
     }
 
     @Override
-    public int getYval() {
+    public float getYval() {
         return this.yval;
     }
 

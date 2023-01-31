@@ -18,6 +18,6 @@ public abstract class WorkstationBase extends FixedObjectBase {
         super(layer);
     }
     public void onHit(ChefBase chef){
-        System.out.println("hit");
+
     }
 }

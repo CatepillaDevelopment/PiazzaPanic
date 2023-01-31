@@ -22,7 +22,6 @@ public class LettuceStation extends IngredientStationBase{
 
     @Override
     public void onHit(ChefBase chef){
-        System.out.println("lettucestation hit");
         chef.pickUp(new Lettuce());
     }
 

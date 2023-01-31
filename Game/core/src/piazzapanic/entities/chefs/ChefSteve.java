@@ -2,9 +2,7 @@ package piazzapanic.entities.chefs;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.physics.box2d.Fixture;
-import com.badlogic.gdx.physics.box2d.World;
 import piazzapanic.entitiysystem.dynamic.characters.chefs.ChefBase;
 
 public class ChefSteve extends ChefBase{
@@ -12,12 +10,12 @@ public class ChefSteve extends ChefBase{
     private Texture texture;
 
     @Override
-    public int getXval() {
+    public float getXval() {
         return this.xval;
     }
 
     @Override
-    public int getYval() {
+    public float getYval() {
         return this.yval;
     }
 

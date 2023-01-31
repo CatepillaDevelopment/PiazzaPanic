@@ -55,7 +55,7 @@ public class Fryer extends PreperationStationBase {
 
     @Override
     public void onHit(ChefBase chef) {
-        System.out.println("Fryer station hit");
+
     }
 
 }

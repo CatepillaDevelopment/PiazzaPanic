@@ -15,10 +15,13 @@ public class WorldContactListener implements ContactListener {
         Fixture fixA = contact.getFixtureA();
         Fixture fixB = contact.getFixtureB();
 
+        // Check if the collision involves a chef
         if(fixA.getUserData() instanceof ChefBase || fixB.getUserData() instanceof ChefBase){
+            // Find which collision what the chef and which was the object
             Fixture chef = (fixA.getUserData() instanceof ChefBase) ? fixA : fixB;
             Fixture object = chef == fixA ? fixB : fixA;
 
+            // Interact with the workstations
             if(object.getUserData() != null  && WorkstationBase.class.isAssignableFrom(object.getUserData().getClass())){
                 WorkstationBase workstation = (WorkstationBase) object.getUserData();
                 workstation.onHit((ChefBase) chef.getUserData());

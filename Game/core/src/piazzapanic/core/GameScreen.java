@@ -73,7 +73,7 @@ public class GameScreen implements Screen{
         // Render the level
         gameWorld.getTileMap().getRenderer().render();
         //render Box2DDebugLines
-        box2DDebugRenderer.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
+        //box2DDebugRenderer.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
         // Render chefs
         this.game.batch.begin();
         this.chefRender();
@@ -100,16 +100,17 @@ public class GameScreen implements Screen{
     }
 
     public void chefRender() {
+        // Render the sprites for each chef
         for (ChefBase chef : this.gameWorld.getCharacters()) {
             sprite = new Sprite(chef.getTexture());
             sprite.setSize(200,200);
-            sprite.setPosition(chef.getXval() - 100, chef.getYval() - 100);
+            sprite.setPosition((chef.getXval() - 100), (chef.getYval() - 100));
             sprite.draw(game.batch);
-            int xOfIngredient = chef.getXval() - 100;
+            float xOfIngredient = (chef.getXval() - 100);
             for (ItemBase item : chef.getHolding()) {
                 sprite = new Sprite(item.getTexture());
-                sprite.setSize(50,50);
-                sprite.setPosition(xOfIngredient, chef.getYval() + 120);
+                sprite.setSize(50 ,50);
+                sprite.setPosition(xOfIngredient , (chef.getYval() + 120));
                 sprite.draw(game.batch);
                 xOfIngredient += 50;
             }
