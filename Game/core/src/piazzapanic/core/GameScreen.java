@@ -28,7 +28,7 @@ public class GameScreen implements Screen{
     public GameScreen(Main game){
         this.game = game;
         gameCam = new OrthographicCamera();
-        gamePort = new FitViewport(this.game.width, this.game.height, gameCam);
+        gamePort = new FitViewport(Main.width, Main.height, gameCam);
         this.hud = new GameHUD(this.game.batch);
 
         // Create the world and lock the camera into the middle
@@ -43,7 +43,7 @@ public class GameScreen implements Screen{
     }
 
     public void update(float dt){
-        this.gameWorld.getTileMap().getWorld().step(1/60f, 6, 2);
+        GameWorld.getTileMap().getWorld().step(1/60f, 6, 2);
 
         //update the current chef
         this.gameWorld.getCurrentChef().update();
@@ -51,7 +51,7 @@ public class GameScreen implements Screen{
 
         // Only render what the gameCam can see
         gameCam.update();
-        gameWorld.getTileMap().getRenderer().setView(gameCam);
+        GameWorld.getTileMap().getRenderer().setView(gameCam);
     }
 
     @Override
@@ -62,9 +62,7 @@ public class GameScreen implements Screen{
         ScreenUtils.clear(0, 0, 0, 1);
 
         // Render the level
-        gameWorld.getTileMap().getRenderer().render();
-        //render Box2DDebugLines
-        //box2DDebugRenderer.render(gameWorld.getTileMap().getWorld(), gameCam.combined);
+        GameWorld.getTileMap().getRenderer().render();
         // Render chefs
         this.game.batch.begin();
         this.chefRender();

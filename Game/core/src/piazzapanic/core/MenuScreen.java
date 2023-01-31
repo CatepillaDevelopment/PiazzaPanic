@@ -25,7 +25,7 @@ public class MenuScreen implements Screen {
 
     public MenuScreen(Main game){
         this.game = game;
-        this.viewport = new StretchViewport(this.game.width, this.game.height, new OrthographicCamera());
+        this.viewport = new StretchViewport(Main.width, Main.height, new OrthographicCamera());
         this.stage = new Stage(viewport, this.game.batch);
         this.difficulty = 5;
 

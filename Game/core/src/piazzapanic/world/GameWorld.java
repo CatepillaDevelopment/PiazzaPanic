@@ -27,8 +27,8 @@ public class GameWorld {
         this.workstations = new ArrayList<>();
         this.chefs = new ArrayList<>();
         this.currentChef = null;
-        this.tileMap =  new TileMap();
         this.ingredientStations = new ArrayList<>();
+        GameWorld.tileMap =  new TileMap();
 
         workstations.add(new ChoppingStation(0));
         workstations.add(new Fryer(0));
